@@ -238,7 +238,46 @@ Anforderungsanalyse<br/>SWE-Praktikum 2 WS 2014/2015<br/>
 <p class="tr-content">
 swe_p2_anforderungsanalyse.0.md<br/>rev. 0 / 23.11.2014<br/><span class="tr-page"></span>
 </p> 
-<h1 id="anforderungsanalyse-für-..."><span class="header-section-number">1</span> Anforderungsanalyse für ...</h1>
-<p>Hier kommt der Inhalt</p>
+<h1 id="anforderungsanalyse-für-das-meldeverfahren-für-medikamente"><span class="header-section-number">1</span> Anforderungsanalyse für das Meldeverfahren für Medikamente</h1>
+<h2 id="sprachliche-analyse-der-anforderungen"><span class="header-section-number">1.1</span> Sprachliche Analyse der Anforderungen</h2>
+<p>Die sprachliche Analyse der Anforderungen erfolgt nach den Regeln der RUPP/SOPHIST Group.<br />Die angegebenen Anforderungen sind zum Teil sehr unklar und bedürfen einer genaueren Untersuchung.</p>
+<p>Im ersten Punkt ist definiert das der &quot;Hersteller von Medikamenten&quot; seine Medikamente zur Bewertung anmelden soll, desweiteren ist dann beschrieben das die Anmeldung bei einer Zulassungsbehörde passieren soll. Daraus lässt sich nicht schließen wie das passieren soll, also ob die Anmeldung über das System stattfinden soll oder nicht. Es ist auch gefordert das das Medikament von der Zulassungsbehörde bestätigt werden muss, aber es ist nicht definiert wie dies passieren soll, daraus ergibt sich, dass das noch definiert werden muss. Aus dieser Anforderung lassen sich 2 Akteure definieren, der Hersteller von Medikamenten und die Zulassungsbehörde.</p>
+<p>Im zweitem Punkt wird gefordert, dass die Ärzte die Auffälligkeiten bei der Anwendung der Medikamente als Ereignisse erfassen, dafür soll vorher eine Registrierung der Ärzte beim Meldeverfahren stattfinden, hier fehlt aber auch jegliche Information wie die Registrierung stattfinden soll. Gefordert ist ebenso das die Behörde das Konto deaktivieren und auch wieder aktivieren kann, dazu muss jedoch der Grund definiert werden. Nun kommt die Rolle des Arztes hinzu.</p>
+<p>Im dritten Punkt der Anforderung ist die Bewertung der Medikamente dur die Behörde festgelegt, das soll anhand der Ereignisse durchgeführt werden. Es fehlt auch hier die Spezifikation ob die Behörde das manuell macht oder ob einiges Automatisiert werden soll.</p>
+<p>Als weiterer Punkt ist festgelegt das die Kategorien duch die Behörde vorgegeben werden und als Wertekatalog erfasst werden sollen.<br />Es sollen ebenso verschiedene Auswertungen geben die je nach Rolle unterschiedlich sind, hier fehlt jedoch was genau angezeigt werden soll. Ein Beispiel für die unklar definierte Anforderung ist z.B. direkt in der ersten geforderten Auswertung. Es ist gewollt das der Hersteller eine Liste der eigenen Medikamente mit Ereignissen zur Verfügung stehen soll, aber es ist nicht definiert welche Datenfelder für den Hersteller zu sehen sein soll.</p>
+<p>Die oben genannten Punkte werden im nächsten Abschnitt etwas präziser und eindeutig formuliert.</p>
+<h2 id="neudefinition-der-anforderungen-für-das-meldeverfahren-für-medikamente"><span class="header-section-number">1.2</span> Neudefinition der Anforderungen für das Meldeverfahren für Medikamente</h2>
+<p>Die Anwendung &quot;Meldeverfahren&quot; dient dazu, Auffälligkeiten bei der Anwendung von Medikamenten zu erfassen und zu bewerten. Dazu sind folgende fachlichen Anforderungen zu berücksichtigen:</p>
+<blockquote>
+<ul>
+<li><strong>Anmeldung von Medikamenten</strong>
+<ul>
+<li>Hersteller von Medikamenten müssen ihre Medikamente die sie zur Bewertung freigeben wollen müssen angemeldet werden</li>
+<li>Die Anmeldung wird durch eine Zulassungsbehörde vorgenommen</li>
+<li>Es wird ein Antrag benötigt, das vom Hersteller ausgefüllt werden muss und dem, von der Zulassungsbehörde, zugestimmt werden muss</li>
+<li>Der Hersteller bekommt ein Initialaccount falls er noch nicht bei der Zulassungsbehörde registriert ist</li>
+<li>Die Medikamente werden in Bezug zum Hersteller geschpeichert</li>
+<li>Bei erfolgreicher Bestätigung der Medikamentenregistrierung wird der Hersteller in Form einer Email benachrichtigt</li>
+<li>Die Bestätigung erfolgt manuell durch die Zulassungsbehörde</li>
+</ul></li>
+<li><strong>Erfassen von Auffälligkeiten von Medikamenten als Ereignisse</strong>
+<ul>
+<li>Ärzte die das Meldeverfahren nutzen wollen müssen sich im System registrieren</li>
+<li>Die Registrierung funktioniert über eine Bestätigung seiner Angaben(Titel, Name, Vorname, Spezialisierung, Anschrift)</li>
+<li>Das System stellt eine Auswahl an Kategorien für ein Ereigniss zur Verfügung, diese wird zwingend benötigt damit ein Ereigniss erfasst werden kann</li>
+<li>Die Behörde hat die möglichkeit Benutzerkonten der Ärte zu deaktivieren und wieder zu aktivieren.</li>
+<li>Die Behörde muss einen Grund für die aktivierung/deaktivierung angeben</li>
+<li>Es ist zwingend notwendig das die zwei vorher genannten Aktivitätet der Behörde dokumentiert werden</li>
+</ul></li>
+<li><strong>Auswertung der Medikamente</strong>
+<ul>
+<li>Die Auswertung erfolgt durch die Behörde, anhand der vorliegenden Ereignisse die von den Ärzten erfasst werden</li>
+<li>Das System muss für die Auswertung die Ereignisse filtern.</li>
+<li>Die Filterung der Ereignisse kann nach der Kategorie erfolgen oder nach dem Hersteller sowie auch die Zeiträume in denen die Ereignisse eingetreten sind</li>
+</ul></li>
+</ul>
+</blockquote>
+<p><strong>Die Administration des Systems wird von der Behörde vorgenommen.</strong></p>
+<p><strong>Die Kategorien für das System muss von der Behörde als Wertekatalog erfasst oder importiert werden, damit diese für die Erfassung der Ereignisse vorgegeben werden.</strong></p>
 </body>
 </html>
