@@ -39,7 +39,7 @@ Ein Mitarbeiter kann im System folgende Funktionen ausüben:
 Je nach Befugnis werden einem Behördenmitarbeiter ein oder mehrere Benutzerkreis(e) zugewiesen, welche unterschiedliche Rechte verleihen (s. unten).
 
 ### Benutzerkreis
-Einem Behördenmitarbeiter muss mindestens ein Benutzerkreis zugeordenet werden. Es existieren Benutzerkreise für die im Abschnitt *Behördenmitarbeiter* genannten Funktionen.
+Einem Behördenmitarbeiter muss mindestens ein Benutzerkreis zugeordnet werden. Es existieren Benutzerkreise für die im Abschnitt *Behördenmitarbeiter* genannten Funktionen.
 Die Benutzerkreise können beliebig kombiniert werden.
 
 ### Hersteller
@@ -121,16 +121,19 @@ Für die Statusänderung muss ein Grund angegeben werden.
 |Attribut	|Typ	|
 |-----------|-------|
 |id			|int	|
+|hersteller_id|int	|
 |name		|string	|
 |beschreibung|string|
 |bestätigt	|bool	|
-|Bewertung	|string	|
+|bewertung	|string	|
 
 ### Ereignis
 
 |Attribut	|Typ	|
 |-----------|-------|
 |id			|int	|
+|medikament_id|int	|
+|arzt_id	|int	|
 |beschreibung|string|
 |priorität	|int	|
 |zeitpunkt	|date	|
