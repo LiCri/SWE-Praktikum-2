@@ -57,13 +57,13 @@ Die oben genannten Punkte werden im nächsten Abschnitt etwas präziser und eind
 
 **Das System muss jeder Rolle Auswertungsmöglichkeiten zur verfügung stellen, dazu sind folgende Anforderungen gestellt:**
 
-> **Hersteller:**
+>+ **Hersteller:**   
 	* Liste der eigenen Medikamente
 		* Anzeige der angemeldeten Mediakmente(Datum der Anmeldung, Name des Medikamentes, Bearbeitungsstatus, Grund für Ablehnung)
 	* Liste der eigenen Medikamente mit Ereignissen
 		* Anzeige der bestätigten Medikamente mit Verweis auf die erfassten Ereignisse und der vorliegenden Bewertung
 		* Das System zeigt an:(Name des Medikamentes, zuständige Behörde, Bewertungsscore, Anzahl der vorliegenden Ereignisse)
-> **Arzt:**
+>+ **Arzt:**   
 	* Liste der erfassten Ereignisse zu einem Medikament mit Filterungsmöglichkeit
 	* Liste der erfassten Ereignisse die der angemeldete Arzt erfasst hat
 	* Das System muss dem Arzt alle angemeldeten und registrierten Medikamente anzeigen
@@ -73,7 +73,7 @@ Die oben genannten Punkte werden im nächsten Abschnitt etwas präziser und eind
 		* Filterung nach den Kategorien 
 		* Anzeige der Bewertung durch die Behörde ein oder ausschalten
 
-> **Behörde:**
+>+ **Behörde:**   
 	* Das System muss der Behörde eine Liste der Hersteller anzeigen (Herstellername, Anzahl angemeldete Medikamente, Anzahl bestätigter Medikammente, Anzahl noch offener Medikamente)
 	* Das System muss der Behörde eine Liste der Medikamente die noch offen(noch nicht bestätigt sind) anzeigen
 	* Das System muss der Behörde eine Liste der Ärzte, die nach Registrierungsdatum sortiert sind, anzeigen
@@ -86,6 +86,8 @@ Die oben genannten Punkte werden im nächsten Abschnitt etwas präziser und eind
 		* Ein- und Ausblenden der Bewertungen
 
 **Anforderungen an die Benutzungsschnittstelle**
+
+>**
 
 **Die Administration des Systems wird von der Behörde vorgenommen.**
 
