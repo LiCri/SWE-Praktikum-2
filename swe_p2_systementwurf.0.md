@@ -50,14 +50,14 @@ Ein Hersteller kann beliebig viele Medikamente anmelden. Um mit dem System inter
 ### Arzt
 Ärzte erben von *User* und implementieren zusätzlich Vorname, Nachname, Spezialisierung und Anschrift.
 
-Ein Arzt ist dafür zuständig Ereignisse zu Medikamenten einzutragen. Sein Status kann von Behördenmitarbeitern mit entsprechenden Rechten unter Angabe eines Grundes aktiviert oder deaktiviert werden.
+Ein Arzt ist dafür zuständig, Ereignisse zu Medikamenten einzutragen. Sein Status kann von Behördenmitarbeitern mit entsprechenden Rechten unter Angabe eines Grundes aktiviert oder deaktiviert werden.
 
 ### Medikament
 Ein Medikament wird von *einem* Hersteller eingetragen und kann anschließend von einem Behördenmitarbeiter bestätigt werden.
 Weiterhin kann ein Medikament beliebig vielen *Ereignissen* zugeordnet werden.
 
 ### Ereignis
-Ein Ereignis wird von einem *Arzt* eingetragen und enthält weitere Informationen, welche von diesem eingetragen werden (Beschreibung und Wertung).
+Ein Ereignis wird von einem *Arzt* eingetragen. Neben einer Beschreibung wird mit der Priorität eine Einordnung bezüglich der Relevanz vorgenommen. Es gilt: Je größer der Wert, desto negativer ist das Ereignis.
 Jedem Ereignis wird genau ein *Medikament* und mindestens eine *Kategorie* zugeordnet.
 
 Eingetragene Ereignisse können von einem Behördenmitarbeiter bewertet werden.
