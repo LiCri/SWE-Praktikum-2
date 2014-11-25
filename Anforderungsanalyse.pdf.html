@@ -247,7 +247,7 @@ swe_p2_anforderungsanalyse.0.md<br/>rev. 0 / 23.11.2014<br/><span class="tr-page
 <p>Als weiterer Punkt ist festgelegt das die Kategorien duch die Behörde vorgegeben werden und als Wertekatalog erfasst werden sollen.<br />Es sollen ebenso verschiedene Auswertungen geben die je nach Rolle unterschiedlich sind, hier fehlt jedoch was genau angezeigt werden soll. Ein Beispiel für die unklar definierte Anforderung ist z.B. direkt in der ersten geforderten Auswertung. Es ist gewollt das der Hersteller eine Liste der eigenen Medikamente mit Ereignissen zur Verfügung stehen soll, aber es ist nicht definiert welche Datenfelder für den Hersteller zu sehen sein soll.</p>
 <p>Die oben genannten Punkte werden im nächsten Abschnitt etwas präziser und eindeutig formuliert.</p>
 <h2 id="neudefinition-der-anforderungen-für-das-meldeverfahren-für-medikamente"><span class="header-section-number">1.2</span> Neudefinition der Anforderungen für das Meldeverfahren für Medikamente</h2>
-<p>Die Anwendung &quot;Meldeverfahren&quot; dient dazu, Auffälligkeiten bei der Anwendung von Medikamenten zu erfassen und zu bewerten. Dazu sind folgende fachlichen Anforderungen zu berücksichtigen:</p>
+<p><strong>Die Anwendung &quot;Meldeverfahren&quot; dient dazu, Auffälligkeiten bei der Anwendung von Medikamenten zu erfassen und zu bewerten. Dazu sind folgende fachlichen Anforderungen zu berücksichtigen:</strong></p>
 <blockquote>
 <ul>
 <li><strong>Anmeldung von Medikamenten</strong>
@@ -277,6 +277,15 @@ swe_p2_anforderungsanalyse.0.md<br/>rev. 0 / 23.11.2014<br/><span class="tr-page
 </ul></li>
 </ul>
 </blockquote>
+<p><strong>Auswertungsmöglichkeiten</strong></p>
+<p><strong>Das System muss jeder Rolle Auswertungsmöglichkeiten zur verfügung stellen, dazu sind folgende Anforderungen gestellt:</strong></p>
+<blockquote>
+<p><strong>Hersteller:</strong> * Liste der eigenen Medikamente * Anzeige der angemeldeten Mediakmente(Datum der Anmeldung, Name des Medikamentes, Bearbeitungsstatus, Grund für Ablehnung) * Liste der eigenen Medikamente mit Ereignissen * Anzeige der bestätigten Medikamente mit Verweis auf die erfassten Ereignisse und der vorliegenden Bewertung * Das System zeigt an:(Name des Medikamentes, zuständige Behörde, Bewertungsscore, Anzahl der vorliegenden Ereignisse) <strong>Arzt:</strong> * Liste der erfassten Ereignisse zu einem Medikament mit Filterungsmöglichkeit * Liste der erfassten Ereignisse die der angemeldete Arzt erfasst hat * Das System muss dem Arzt alle angemeldeten und registrierten Medikamente anzeigen * Das System muss dem Arzt die Möglichkeit zur Suche von bestimmten Medikamenten bereitstellen * Das System muss darüber hinaus noch dem Arzt verschiedene Fildermöglichkeiten bieten, diese sind: * Filterung nach eigenen Ereignissen zu einem Medikament * Filterung nach den Kategorien * Anzeige der Bewertung durch die Behörde ein oder ausschalten</p>
+</blockquote>
+<blockquote>
+<p><strong>Behörde:</strong> * Das System muss der Behörde eine Liste der Hersteller anzeigen (Herstellername, Anzahl angemeldete Medikamente, Anzahl bestätigter Medikammente, Anzahl noch offener Medikamente) * Das System muss der Behörde eine Liste der Medikamente die noch offen(noch nicht bestätigt sind) anzeigen * Das System muss der Behörde eine Liste der Ärzte, die nach Registrierungsdatum sortiert sind, anzeigen * Das System muss der Behörde eine Liste über die erfassten Kategorien anzeigen * Das System muss der Behörde eine Liste über die Medikamente, mit den erfassten Ereignissen sowie auch der Bewertung(falls vorhanden), anzeigen * Das System muss der Behörde eine Liste der Ereignisse anzeigen, dazu muss folgendes beachtet werden: * Filterung nach Hersteller muss gegeben sein * Filterung nach Kategorien muss gegeben sein * Filterung nach Bewertungsscore muss gegeben sein * Ein- und Ausblenden der Bewertungen</p>
+</blockquote>
+<p><strong>Anforderungen an die Benutzungsschnittstelle</strong></p>
 <p><strong>Die Administration des Systems wird von der Behörde vorgenommen.</strong></p>
 <p><strong>Die Kategorien für das System muss von der Behörde als Wertekatalog erfasst oder importiert werden, damit diese für die Erfassung der Ereignisse vorgegeben werden.</strong></p>
 </body>

@@ -31,7 +31,7 @@ Es sollen ebenso verschiedene Auswertungen geben die je nach Rolle unterschiedli
 Die oben genannten Punkte werden im nächsten Abschnitt etwas präziser und eindeutig formuliert.
 
 ##Neudefinition der Anforderungen für das Meldeverfahren für Medikamente
-Die Anwendung "Meldeverfahren" dient dazu, Auffälligkeiten bei der Anwendung von Medikamenten zu erfassen und zu bewerten. Dazu sind folgende fachlichen Anforderungen zu berücksichtigen:   
+**Die Anwendung "Meldeverfahren" dient dazu, Auffälligkeiten bei der Anwendung von Medikamenten zu erfassen und zu bewerten. Dazu sind folgende fachlichen Anforderungen zu berücksichtigen:**   
 
 >+ **Anmeldung von Medikamenten**
 	* Hersteller von Medikamenten müssen ihre Medikamente die sie zur Bewertung freigeben wollen müssen angemeldet werden
@@ -52,6 +52,40 @@ Die Anwendung "Meldeverfahren" dient dazu, Auffälligkeiten bei der Anwendung vo
 	* Die Auswertung erfolgt durch die Behörde, anhand der vorliegenden Ereignisse die von den Ärzten erfasst werden
 	* Das System muss für die Auswertung die Ereignisse filtern.
 	* Die Filterung der Ereignisse kann nach der Kategorie erfolgen oder nach dem Hersteller sowie auch die Zeiträume in denen die Ereignisse eingetreten sind
+
+**Auswertungsmöglichkeiten**
+
+**Das System muss jeder Rolle Auswertungsmöglichkeiten zur verfügung stellen, dazu sind folgende Anforderungen gestellt:**
+
+> **Hersteller:**
+	* Liste der eigenen Medikamente
+		* Anzeige der angemeldeten Mediakmente(Datum der Anmeldung, Name des Medikamentes, Bearbeitungsstatus, Grund für Ablehnung)
+	* Liste der eigenen Medikamente mit Ereignissen
+		* Anzeige der bestätigten Medikamente mit Verweis auf die erfassten Ereignisse und der vorliegenden Bewertung
+		* Das System zeigt an:(Name des Medikamentes, zuständige Behörde, Bewertungsscore, Anzahl der vorliegenden Ereignisse)
+> **Arzt:**
+	* Liste der erfassten Ereignisse zu einem Medikament mit Filterungsmöglichkeit
+	* Liste der erfassten Ereignisse die der angemeldete Arzt erfasst hat
+	* Das System muss dem Arzt alle angemeldeten und registrierten Medikamente anzeigen
+	* Das System muss dem Arzt die Möglichkeit zur Suche von bestimmten Medikamenten bereitstellen
+	* Das System muss darüber hinaus noch dem Arzt verschiedene Fildermöglichkeiten bieten, diese sind:
+		* Filterung nach eigenen Ereignissen zu einem Medikament
+		* Filterung nach den Kategorien 
+		* Anzeige der Bewertung durch die Behörde ein oder ausschalten
+
+> **Behörde:**
+	* Das System muss der Behörde eine Liste der Hersteller anzeigen (Herstellername, Anzahl angemeldete Medikamente, Anzahl bestätigter Medikammente, Anzahl noch offener Medikamente)
+	* Das System muss der Behörde eine Liste der Medikamente die noch offen(noch nicht bestätigt sind) anzeigen
+	* Das System muss der Behörde eine Liste der Ärzte, die nach Registrierungsdatum sortiert sind, anzeigen
+	* Das System muss der Behörde eine Liste über die erfassten Kategorien anzeigen
+	* Das System muss der Behörde eine Liste über die Medikamente, mit den erfassten Ereignissen sowie auch der Bewertung(falls vorhanden), anzeigen
+	* Das System muss der Behörde eine Liste der Ereignisse anzeigen, dazu muss folgendes beachtet werden:
+		* Filterung nach Hersteller muss gegeben sein
+		* Filterung nach Kategorien muss gegeben sein
+		* Filterung nach Bewertungsscore muss gegeben sein
+		* Ein- und Ausblenden der Bewertungen
+
+**Anforderungen an die Benutzungsschnittstelle**
 
 **Die Administration des Systems wird von der Behörde vorgenommen.**
 
