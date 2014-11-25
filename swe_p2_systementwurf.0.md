@@ -27,7 +27,7 @@ Die Klasse *User* dient als abstrakte Basisklasse für die drei möglichen Rolle
 ### Behördenmitarbeiter
 Behördenmitarbeiter erben von *User* und speichern zusätzlich Vor- und Nachname.
 
-Ein Mitarbeiter kann im System mehrere Funktionen ausüben:
+Ein Mitarbeiter kann im System folgende Funktionen ausüben:
 
 1. Bestätigung der von den Herstellern angemeldeten Medikamente
 2. Bewertung der von den Ärzten eingetragenen Ereignisse
@@ -35,22 +35,48 @@ Ein Mitarbeiter kann im System mehrere Funktionen ausüben:
 4. Datenpflege
 5. Administrative Aufgaben
 
-Je nach Befugnis wird einem Behördenmitarbeiter ein oder mehrere Benutzerkreis(e) zugewiesen, welche unterschiedliche Rechte verleihen (s. unten).
+Je nach Befugnis werden einem Behördenmitarbeiter ein oder mehrere Benutzerkreis(e) zugewiesen, welche unterschiedliche Rechte verleihen (s. unten).
 
 ### Benutzerkreis
 Einem Behördenmitarbeiter muss mindestens ein Benutzerkreis zugeordenet werden. Es existieren Benutzerkreise für die im Abschnitt *Behördenmitarbeiter* genannten Funktionen.
 Die Benutzerkreise können beliebig kombiniert werden.
 
 ### Hersteller
+Hersteller erben von *User* und implementieren zusätzlich Namen und Anschrift.
+
+Ein Hersteller kann beliebig viele Medikamente anmelden.
 
 ### Arzt
+Ärzte erben von *User* und implementieren zusätzlich Vorname, Nachname, Spezialisierung und Anschrift.
+
+Ein Arzt ist dafür zuständig Ereignisse zu Medikamenten einzutragen. Sein Status kann von Behördenmitarbeitern mit entsprechenden Rechten unter Angabe eines Grundes aktiviert oder deaktiviert werden.
 
 ### Medikament
+Ein Medikament wird von *einem* Hersteller eingetragen und kann anschließend von einem Behördenmitarbeiter bestätigt werden.
+Weiterhin kann ein Medikament beliebig vielen *Ereignissen* zugeordnet werden.
 
 ### Ereignis
+Ein Ereignis wird von einem *Arzt* eingetragen und enthält weitere Informationen, welche von diesem eingetragen werden (Beschreibung und Wertung).
+Jedem Ereignis wird genau ein *Medikament* und mindestens eine *Kategorie* zugeordnet.
+
+Eingetragene Ereignisse können von einem Behördenmitarbeiter bewertet werden.
+
+## Bewertung
+Die *Bewertung* wird von einem *Behördenmitarbeiter* für ein *Ereignis* hinterlegt und enthält eine Einordnung in Textform.
 
 ### Kategorie
-
-### Arzt
+Eine *Kategorie* spezifiziert ein *Ereignis*. 
 
 ### Statusänderung
+Eine *Statusänderung* kann von einem *Behördenmitarbeiter* hinzugefügt werden und bezieht sich immer auf einen Arzt. Es bewirkt die Änderung des aktiv-Flags. 
+Für die Statusänderung muss ein Grund angegeben werden.
+
+## Umwandlung in relationales Datenmodell
+
+### User
+
+|Attribut	|Typ	|
+|-----------|-------|
+|id			|int	|
+|email		|string	|
+|passwort	|string	|
