@@ -61,11 +61,11 @@ Jedem Ereignis wird genau ein *Medikament* und mindestens eine *Kategorie* zugeo
 
 Eingetragene Ereignisse können von einem Behördenmitarbeiter bewertet werden.
 
-## Bewertung
-Die *Bewertung* wird von einem *Behördenmitarbeiter* für ein *Ereignis* hinterlegt und enthält eine Einordnung in Textform.
-
 ### Kategorie
 Eine *Kategorie* spezifiziert ein *Ereignis*. 
+
+### Bewertung
+Die *Bewertung* wird von einem *Behördenmitarbeiter* für ein *Ereignis* hinterlegt und enthält eine Einordnung in Textform.
 
 ### Statusänderung
 Eine *Statusänderung* kann von einem *Behördenmitarbeiter* hinzugefügt werden und bezieht sich immer auf einen Arzt. Es bewirkt die Änderung des aktiv-Flags. 
@@ -80,3 +80,83 @@ Für die Statusänderung muss ein Grund angegeben werden.
 |id			|int	|
 |email		|string	|
 |passwort	|string	|
+|registrierung|datetime|
+|role		|int	|
+
+### Benutzerkreis
+
+|Attribut	|Typ	|
+|-----------|-------|
+|id			|int	|
+|bezeichnung|string	|
+
+### User_Benutzerkreis
+
+|Attribut	|Typ	|
+|-----------|-------|
+|user_id	|int	|
+|benutzerkreis_id|int|
+
+### Hersteller
+
+|Attribut	|Typ	|
+|-----------|-------|
+|id			|int	|
+|name		|string	|
+|anschrift	|string	|
+
+### Arzt
+
+|Attribut	|Typ	|
+|-----------|-------|
+|id			|int	|
+|vorname	|string	|
+|nachname	|string	|
+|spezialisierung|string|
+|anschrift	|string	|
+|aktiv		|bool	|
+
+### Medikament
+
+|Attribut	|Typ	|
+|-----------|-------|
+|id			|int	|
+|name		|string	|
+|beschreibung|string|
+|bestätigt	|bool	|
+
+### Ereignis
+
+|Attribut	|Typ	|
+|-----------|-------|
+|id			|int	|
+|beschreibung|stirng|
+|wertung	|int	|
+
+### Kategorie
+
+|Attribut	|Typ	|
+|-----------|-------|
+|id			|int	|
+|bezeichnung|string	|
+
+### Ereignis_Kategorie
+
+|Attribut	|Typ	|
+|-----------|-------|
+|ereignis_id|int	|
+|kategorie_id|int	|
+
+### Bewertung
+
+|Attribut	|Typ	|
+|-----------|-------|
+
+### Statusänderung
+|Attribut	|Typ	|
+|-----------|-------|
+|id			|int	|
+|behördenMA_id|int  |
+|arzt_id	|int	|
+|grund		|string	|
+|datum		|datetime|
