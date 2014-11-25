@@ -1,82 +1,129 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<diagram program="umlet" version="13.0">
+<diagram program="umlet" version="13.1">
   <zoom_level>10</zoom_level>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>20</x>
-      <y>190</y>
-      <w>200</w>
-      <h>100</h>
+      <x>230</x>
+      <y>30</y>
+      <w>1090</w>
+      <h>390</h>
     </coordinates>
     <panel_attributes>symbol=component
 &lt;&lt;component&gt;&gt;
 
-Listen</panel_attributes>
+Meldeverfahren</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>20</x>
-      <y>10</y>
-      <w>200</w>
-      <h>100</h>
+      <x>850</x>
+      <y>130</y>
+      <w>280</w>
+      <h>120</h>
     </coordinates>
     <panel_attributes>symbol=component
 &lt;&lt;component&gt;&gt;
 
-Melden</panel_attributes>
+Aplikationslogik</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>440</x>
-      <y>180</y>
-      <w>200</w>
-      <h>100</h>
+      <x>420</x>
+      <y>130</y>
+      <w>290</w>
+      <h>120</h>
     </coordinates>
     <panel_attributes>symbol=component
 &lt;&lt;component&gt;&gt;
 
-Bewerten</panel_attributes>
+Benutzerschnittstelle</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>630</x>
-      <y>230</y>
-      <w>120</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>lt=()-
-Bewertung</panel_attributes>
-    <additional_attributes>100.0;20.0;10.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>330</x>
-      <y>220</y>
-      <w>130</w>
+      <x>1120</x>
+      <y>170</y>
+      <w>110</w>
       <h>50</h>
     </coordinates>
     <panel_attributes>lt=-(
-Medikament</panel_attributes>
-    <additional_attributes>110.0;20.0;20.0;20.0</additional_attributes>
+Daten</panel_attributes>
+    <additional_attributes>10.0;20.0;80.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>210</x>
-      <y>220</y>
-      <w>140</w>
+      <x>1310</x>
+      <y>170</y>
+      <w>110</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=[&lt;]-(</panel_attributes>
+    <additional_attributes>10.0;20.0;80.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1200</x>
+      <y>170</y>
+      <w>130</w>
       <h>40</h>
     </coordinates>
+    <panel_attributes>lt=.&gt;
+</panel_attributes>
+    <additional_attributes>110.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>800</x>
+      <y>240</y>
+      <w>210</w>
+      <h>80</h>
+    </coordinates>
     <panel_attributes>lt=()-
-Medikamente</panel_attributes>
-    <additional_attributes>120.0;20.0;10.0;20.0</additional_attributes>
+liefert Funktionen</panel_attributes>
+    <additional_attributes>10.0;60.0;190.0;60.0;190.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>550</x>
+      <y>240</y>
+      <w>270</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=-(
+
+holt Funktionen</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0;240.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>60</x>
+      <y>170</y>
+      <w>190</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=()-[&lt;]
+Benutzerfunktionen</panel_attributes>
+    <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>230</x>
+      <y>180</y>
+      <w>210</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>190.0;10.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
