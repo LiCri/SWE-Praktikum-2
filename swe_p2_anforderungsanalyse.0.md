@@ -13,7 +13,7 @@ revision:
 lang: de
 ---
 
-#Anforderungsanalyse für das Meldeverfahren für Medikamente
+#Anforderungsanalyse für das Meldeverfahren
 
 ##Sprachliche Analyse der Anforderungen
 Die sprachliche Analyse der Anforderungen erfolgt nach den Regeln der RUPP/SOPHIST Group.   
@@ -30,7 +30,17 @@ Es sollen ebenso verschiedene Auswertungen geben die je nach Rolle unterschiedli
 
 Die oben genannten Punkte werden im nächsten Abschnitt etwas präziser und eindeutig formuliert.
 
-##Neudefinition der Anforderungen für das Meldeverfahren für Medikamente
+##Offene Fragen bei der Anforderung
+Anhand der vorliegenden Mängel in der Formulierung der Anforderungen für das Meldeverfahren, ergeben sich einige offen Fragen.
+Diese Fragen lauten:
+
+>*Wie soll die Anmeldung stattfinden? Schriftlich oder über das System?*   
+>*Wie soll eine Medikamentenanmeldung, das von der Behörde eine Zustimmung erhalten hat, an den Hersteller bestätigt werden?*   
+>*Sollen sich die Ärzte selbst im System registrieren oder bekommt er einen festen Account mit einem Initialpasswort zugeschickt?*   
+>*Soll eine spezielle Bewertungsmaske implementiert werden?*   
+>*Sollen die Benutzer selbst entscheiden welche rolle sie einnehmen?*   
+
+#Neudefinition der Anforderungen für das Meldeverfahren
 **Die Anwendung "Meldeverfahren" dient dazu, Auffälligkeiten bei der Anwendung von Medikamenten zu erfassen und zu bewerten. Dazu sind folgende fachlichen Anforderungen zu berücksichtigen:**   
 
 >+ **Anmeldung von Medikamenten**
@@ -87,8 +97,30 @@ Die oben genannten Punkte werden im nächsten Abschnitt etwas präziser und eind
 
 **Anforderungen an die Benutzungsschnittstelle**
 
->**
+>+ **Pflege der Datenbestände**
+	* Das System muss den verschiedenen Benutzern, gemäß ihrer Rolle, die Möglichkeit bieten Datensätze zu Erfassen, Ändern und zu Löschen
+	* Das System muss in der Lage sein alle fachlichen Anforderunggen zu erfüllen
+	* Das System muss für die verschiedenen Benutzer eine an- und abmeldung ermöglichen
+	* Das System muss dem Benutzer, nur die für die Rolle vorgesehen Funktionalität ermöglchen
+	* Das System muss den Mitarbeitern der Behörde ermöglichen das sie mehrere Benutzerrollen einnehmen können, damit sie ihre Aufgaben wahrnehmen können
 
-**Die Administration des Systems wird von der Behörde vorgenommen.**
+>+ **Administration des Systems**
+	* Das System wird von der Behörde administriert
+	* Das System muss innerhalb der Behörde auch verschiedene Benutzerkreise berücksichtigen
+	* Mögliche Benutzerkreise:
+		* Registrierung von Medikamenten
+		* Registrierung von Ärzten
+		* Bewertung von Medikamenten
+		* Pflege der Daten
+		* Administrator für das System
 
-**Die Kategorien für das System muss von der Behörde als Wertekatalog erfasst oder importiert werden, damit diese für die Erfassung der Ereignisse vorgegeben werden.**
+**Externe Schnittstellen**
+
+>Das System muss auf externe Daten zugreifen können, damit für die Ärzte, Hersteller und Medikamente zentrale Melderegister verwendet werden. Die externen Daten werden über Dateiimporte aus den externen Melderegistern im Sytem gespeichert.
+
+**Zusätzliche Anforderungen**   
+
+> Das System wird als Web-Anwendung zur verfügung gestellt   
+> Das System wird mit einem Postgresql-Datenbank System, für die Datenhaltung verknüpft
+
+**Die Kategorien für das System muss von der Behörde als Wertekatalog erfasst oder importiert werden, damit diese für die Erfassung der Ereignisse vorgegeben werden können.**
