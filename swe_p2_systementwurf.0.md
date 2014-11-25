@@ -30,7 +30,7 @@ Behördenmitarbeiter erben von *User* und speichern zusätzlich Vor- und Nachnam
 Ein Mitarbeiter kann im System folgende Funktionen ausüben:
 
 1. Bestätigung der von den Herstellern angemeldeten Medikamente
-2. Bewertung der von den Ärzten eingetragenen Ereignisse
+2. Bewertung der von den Ärzten eingetragenen Ereignisse und dahingehend Bewertung der Medikamente
 3. (De)aktivierung der Ärzte-Accounts
 4. Datenpflege
 5. Administrative Aufgaben
@@ -54,6 +54,7 @@ Ein Arzt ist dafür zuständig Ereignisse zu Medikamenten einzutragen. Sein Stat
 ### Medikament
 Ein Medikament wird von *einem* Hersteller eingetragen und kann anschließend von einem Behördenmitarbeiter bestätigt werden.
 Weiterhin kann ein Medikament beliebig vielen *Ereignissen* zugeordnet werden.
+Ein Medikament wird von einem Behördenmitarbeiter anhand der dafür eingetragenen *Ereignisse* bewertet.
 
 ### Ereignis
 Ein Ereignis wird von einem *Arzt* eingetragen und enthält weitere Informationen, welche von diesem eingetragen werden (Beschreibung und Wertung).
@@ -63,9 +64,6 @@ Eingetragene Ereignisse können von einem Behördenmitarbeiter bewertet werden.
 
 ### Kategorie
 Eine *Kategorie* spezifiziert ein *Ereignis*. 
-
-### Bewertung
-Die *Bewertung* wird von einem *Behördenmitarbeiter* für ein *Ereignis* hinterlegt und enthält eine Einordnung in Textform.
 
 ### Statusänderung
 Eine *Statusänderung* kann von einem *Behördenmitarbeiter* hinzugefügt werden und bezieht sich immer auf einen Arzt. Es bewirkt die Änderung des aktiv-Flags. 
@@ -78,10 +76,10 @@ Für die Statusänderung muss ein Grund angegeben werden.
 |Attribut	|Typ	|
 |-----------|-------|
 |id			|int	|
+|rolle_id	|int	|
 |email		|string	|
 |passwort	|string	|
 |registrierung|datetime|
-|role		|int	|
 
 ### Benutzerkreis
 
@@ -124,6 +122,7 @@ Für die Statusänderung muss ein Grund angegeben werden.
 |name		|string	|
 |beschreibung|string|
 |bestätigt	|bool	|
+|Bewertung	|string	|
 
 ### Ereignis
 
@@ -146,11 +145,6 @@ Für die Statusänderung muss ein Grund angegeben werden.
 |-----------|-------|
 |ereignis_id|int	|
 |kategorie_id|int	|
-
-### Bewertung
-
-|Attribut	|Typ	|
-|-----------|-------|
 
 ### Statusänderung
 |Attribut	|Typ	|

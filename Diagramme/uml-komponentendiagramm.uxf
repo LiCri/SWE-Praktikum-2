@@ -214,20 +214,23 @@ m2=&lt;&lt;manifest&gt;&gt;</panel_attributes>
     <panel_attributes>symbol=component
 &lt;&lt;componente&gt;&gt;
 
-Meldergister</panel_attributes>
+(externes) Melderegister</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>410</x>
+      <x>460</x>
       <y>80</y>
-      <w>180</w>
+      <w>160</w>
       <h>100</h>
     </coordinates>
     <panel_attributes>lt=)-[v]
+
+
+   benötigt externe Daten
 </panel_attributes>
-    <additional_attributes>20.0;20.0;160.0;20.0;160.0;80.0</additional_attributes>
+    <additional_attributes>40.0;20.0;110.0;20.0;110.0;80.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -256,11 +259,12 @@ Meldergister</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>300</x>
-      <y>90</y>
-      <w>130</w>
-      <h>30</h>
+      <y>80</y>
+      <w>200</w>
+      <h>40</h>
     </coordinates>
-    <panel_attributes>lt=()-</panel_attributes>
-    <additional_attributes>110.0;10.0;10.0;10.0</additional_attributes>
+    <panel_attributes>lt=()-
+liefert externe Daten</panel_attributes>
+    <additional_attributes>180.0;20.0;10.0;20.0</additional_attributes>
   </element>
 </diagram>
