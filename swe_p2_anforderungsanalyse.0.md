@@ -38,7 +38,7 @@ Diese Fragen lauten:
 >*Wie soll eine Medikamentenanmeldung, das von der Behörde eine Zustimmung erhalten hat, an den Hersteller bestätigt werden?*   
 >*Sollen sich die Ärzte selbst im System registrieren oder bekommt er einen festen Account mit einem Initialpasswort zugeschickt?*   
 >*Soll eine spezielle Bewertungsmaske implementiert werden?*   
->*Sollen die Benutzer selbst entscheiden welche rolle sie einnehmen?*   
+>*Sollen die Benutzer selbst entscheiden welche Rolle sie einnehmen?*   
 
 #Neudefinition der Anforderungen für das Meldeverfahren
 **Die Anwendung "Meldeverfahren" dient dazu, Auffälligkeiten bei der Anwendung von Medikamenten zu erfassen und zu bewerten. Dazu sind folgende fachlichen Anforderungen zu berücksichtigen:**   
