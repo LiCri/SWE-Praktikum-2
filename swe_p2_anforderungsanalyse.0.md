@@ -19,57 +19,56 @@ lang: de
 Die sprachliche Analyse der Anforderungen erfolgt nach den Regeln der RUPP/SOPHIST Group.   
 Die angegebenen Anforderungen sind zum Teil sehr unklar und bedürfen einer genaueren Untersuchung.   
 
-Im ersten Punkt ist definiert das der "Hersteller von Medikamenten" seine Medikamente zur Bewertung anmelden soll, desweiteren ist dann beschrieben das die Anmeldung bei einer Zulassungsbehörde passieren soll. Daraus lässt sich nicht schließen wie das passieren soll, also ob die Anmeldung über das System stattfinden soll oder nicht. Es ist auch gefordert das das Medikament von der Zulassungsbehörde bestätigt werden muss, aber es ist nicht definiert wie dies passieren soll, daraus ergibt sich, dass das noch definiert werden muss. Aus dieser Anforderung lassen sich 2 Akteure definieren, der Hersteller von Medikamenten und die Zulassungsbehörde.   
+Im ersten Punkt ist definiert, dass der "Hersteller von Medikamenten" seine Medikamente zur Bewertung anmelden soll, desweiteren ist beschrieben, dass die Anmeldung über eine Zulassungsbehörde erfolgen soll. Daraus lassen sich keine Informationen über die Art und Weise ableiten, also ob die Anmeldung über das System stattfinden soll oder nicht. Es ist auch gefordert, dass das Medikament von der Zulassungsbehörde bestätigt werden muss, jedoch ist nicht definiert, wie dies passieren soll. Hier muss noch eine genauere Definition erfolgen. Aus dieser Anforderung lassen sich 2 Akteure definieren: der Hersteller von Medikamenten und die Zulassungsbehörde.   
 
-Im zweitem Punkt wird gefordert, dass die Ärzte die Auffälligkeiten bei der Anwendung der Medikamente als Ereignisse erfassen, dafür soll vorher eine Registrierung der Ärzte beim Meldeverfahren stattfinden, hier fehlt aber auch jegliche Information wie die Registrierung stattfinden soll. Gefordert ist ebenso das die Behörde das Konto deaktivieren und auch wieder aktivieren kann, dazu muss jedoch der Grund definiert werden. Nun kommt die Rolle des Arztes hinzu.   
+Im zweitem Punkt wird gefordert, dass die Ärzte die Auffälligkeiten bei der Anwendung der Medikamente als Ereignisse erfassen. Dafür soll vorher eine Registrierung der Ärzte beim Meldeverfahren stattfinden, hier fehlt aber auch jegliche Information darüber, wie die Registrierung stattfinden soll. Gefordert ist ebenso, dass die Behörde das Konto unter Angabe eines Grundes deaktivieren und auch wieder aktivieren kann. Nun kommt die Rolle des Arztes hinzu.   
 
-Im dritten Punkt der Anforderung ist die Bewertung der Medikamente dur die Behörde festgelegt, das soll anhand der Ereignisse durchgeführt werden. Es fehlt auch hier die Spezifikation ob die Behörde das manuell macht oder ob einiges Automatisiert werden soll.   
+Im dritten Punkt der Anforderung ist die Bewertung der Medikamente für die Behörde festgelegt, das soll anhand der Ereignisse durchgeführt werden. Es fehlt auch hier die Spezifikation, ob die Behörde das manuell macht oder ob einiges Automatisiert werden soll.   
 
-Als weiterer Punkt ist festgelegt das die Kategorien duch die Behörde vorgegeben werden und als Wertekatalog erfasst werden sollen.   
-Es sollen ebenso verschiedene Auswertungen geben die je nach Rolle unterschiedlich sind, hier fehlt jedoch was genau angezeigt werden soll. Ein Beispiel für die unklar definierte Anforderung ist z.B. direkt in der ersten geforderten Auswertung. Es ist gewollt das der Hersteller eine Liste der eigenen Medikamente mit Ereignissen zur Verfügung stehen soll, aber es ist nicht definiert welche Datenfelder für den Hersteller zu sehen sein soll.
+Als weiterer Punkt ist festgelegt, dass die Kategorien duch die Behörde vorgegeben werden und als Wertekatalog erfasst werden sollen.   
+Es soll ebenso verschiedene Auswertungen geben, die je nach Rolle unterschiedlich sind - hier fehlt jedoch eine Angabe darüber, was genau angezeigt werden soll. Ein Beispiel für die unklar definierte Anforderung ist z.B. direkt in der ersten geforderten Auswertung. Es ist gewollt, dass der Hersteller eine Liste der eigenen Medikamente mit Ereignissen zur Verfügung stehen soll, aber es ist nicht definiert, welche Datenfelder für den Hersteller zu sehen sein sollen.
 
 Die oben genannten Punkte werden im nächsten Abschnitt etwas präziser und eindeutig formuliert.
 
 ##Offene Fragen bei der Anforderung
-Anhand der vorliegenden Mängel in der Formulierung der Anforderungen für das Meldeverfahren, ergeben sich einige offen Fragen.
-Diese Fragen lauten:
+Anhand der vorliegenden Mängel in der Formulierung der Anforderungen für das Meldeverfahren ergeben sich folgende offen Fragen:
 
 >*Wie soll die Anmeldung stattfinden? Schriftlich oder über das System?*   
->*Wie soll eine Medikamentenanmeldung, das von der Behörde eine Zustimmung erhalten hat, an den Hersteller bestätigt werden?*   
->*Sollen sich die Ärzte selbst im System registrieren oder bekommt er einen festen Account mit einem Initialpasswort zugeschickt?*   
+>*Wie soll eine Medikamentenanmeldung, welche von der Behörde eine Zustimmung erhalten hat, an den Hersteller bestätigt werden?*   
+>*Sollen sich die Ärzte selbst im System registrieren, oder bekommen sie einen festen Account mit einem Initialpasswort zugeschickt?*   
 >*Soll eine spezielle Bewertungsmaske implementiert werden?*   
->*Sollen die Benutzer selbst entscheiden welche Rolle sie einnehmen?*   
+>*Sollen die Benutzer selbst entscheiden, welche Rolle sie einnehmen?*   
 
 #Neudefinition der Anforderungen für das Meldeverfahren
 **Die Anwendung "Meldeverfahren" dient dazu, Auffälligkeiten bei der Anwendung von Medikamenten zu erfassen und zu bewerten. Dazu sind folgende fachlichen Anforderungen zu berücksichtigen:**   
 
 >+ **Anmeldung von Medikamenten**
-	* Hersteller von Medikamenten müssen ihre Medikamente die sie zur Bewertung freigeben wollen müssen angemeldet werden
+	* Hersteller von Medikamenten müssen ihre Medikamente, die sie zur Bewertung freigeben wollen, anmelden
 	* Die Anmeldung wird durch eine Zulassungsbehörde vorgenommen
-	* Es wird ein Antrag benötigt, das vom Hersteller ausgefüllt werden muss und dem, von der Zulassungsbehörde, zugestimmt werden muss
-	* Der Hersteller bekommt ein Initialaccount falls er noch nicht bei der Zulassungsbehörde registriert ist
-	* Die Medikamente werden in Bezug zum Hersteller geschpeichert
-	* Bei erfolgreicher Bestätigung der Medikamentenregistrierung wird der Hersteller in Form einer Email benachrichtigt
+	* Es wird ein Antrag benötigt, welcher vom Hersteller ausgefüllt und von der Zulassungsbehörde bestätigt werden muss
+	* Der Hersteller bekommt einen Initialaccount, falls er noch nicht bei der Zulassungsbehörde registriert ist
+	* Die Medikamente werden in Bezug zum Hersteller gespeichert
+	* Bei erfolgreicher Bestätigung der Medikamentenregistrierung wird der Hersteller in Form einer E-Mail benachrichtigt
 	* Die Bestätigung erfolgt manuell durch die Zulassungsbehörde
 >+ **Erfassen von Auffälligkeiten von Medikamenten als Ereignisse**
-	* Ärzte die das Meldeverfahren nutzen wollen müssen sich im System registrieren
-	* Die Registrierung funktioniert über eine Bestätigung seiner Angaben(Titel, Name, Vorname, Spezialisierung, Anschrift)
-	* Das System stellt eine Auswahl an Kategorien für ein Ereigniss zur Verfügung, diese wird zwingend benötigt damit ein Ereigniss erfasst werden kann
-	* Die Behörde hat die möglichkeit Benutzerkonten der Ärte zu deaktivieren und wieder zu aktivieren.
-	* Die Behörde muss einen Grund für die aktivierung/deaktivierung angeben
-	* Es ist zwingend notwendig das die zwei vorher genannten Aktivitätet der Behörde dokumentiert werden
+	* Ärzte, die das Meldeverfahren nutzen wollen, müssen sich im System registrieren
+	* Die Registrierung funktioniert über eine Bestätigung seiner Angaben (Titel, Name, Vorname, Spezialisierung, Anschrift)
+	* Das System stellt eine Auswahl an Kategorien für ein Ereignis zur Verfügung. Diese werden zwingend benötigt, damit ein Ereignis erfasst werden kann
+	* Die Behörde hat die Möglichkeit, Benutzerkonten der Ärte zu deaktivieren und wieder zu aktivieren.
+	* Die Behörde muss einen Grund für die Aktivierung/Deaktivierung angeben
+	* Es ist zwingend notwendig, die zwei vorher genannten Aktivitäten der Behörde zu dokumentieren
 >+ **Auswertung der Medikamente**
-	* Die Auswertung erfolgt durch die Behörde, anhand der vorliegenden Ereignisse die von den Ärzten erfasst werden
+	* Die Auswertung erfolgt durch die Behörde anhand der vorliegenden Ereignisse, welche von den Ärzten erfasst werden
 	* Das System muss für die Auswertung die Ereignisse filtern.
-	* Die Filterung der Ereignisse kann nach der Kategorie erfolgen oder nach dem Hersteller sowie auch die Zeiträume in denen die Ereignisse eingetreten sind
+	* Die Filterung der Ereignisse kann nach der Kategorie erfolgen oder nach dem Hersteller sowie auch die Zeiträume, in denen die Ereignisse eingetreten sind
 
 **Auswertungsmöglichkeiten**
 
-**Das System muss jeder Rolle Auswertungsmöglichkeiten zur verfügung stellen, dazu sind folgende Anforderungen gestellt:**
+**Das System muss jeder Rolle Auswertungsmöglichkeiten zur Verfügung stellen, dazu sind folgende Anforderungen gestellt:**
 
 >+ **Hersteller:**   
 	* Liste der eigenen Medikamente
-		* Anzeige der angemeldeten Mediakmente(Datum der Anmeldung, Name des Medikamentes, Bearbeitungsstatus, Grund für Ablehnung)
+		* Anzeige der angemeldeten Medikamente (Datum der Anmeldung, Name des Medikamentes, Bearbeitungsstatus, Grund für Ablehnung)
 	* Liste der eigenen Medikamente mit Ereignissen
 		* Anzeige der bestätigten Medikamente mit Verweis auf die erfassten Ereignisse und der vorliegenden Bewertung
 		* Das System zeigt an:(Name des Medikamentes, zuständige Behörde, Bewertungsscore, Anzahl der vorliegenden Ereignisse)
@@ -98,11 +97,11 @@ Diese Fragen lauten:
 **Anforderungen an die Benutzungsschnittstelle**
 
 >+ **Pflege der Datenbestände**
-	* Das System muss den verschiedenen Benutzern, gemäß ihrer Rolle, die Möglichkeit bieten Datensätze zu Erfassen, Ändern und zu Löschen
-	* Das System muss in der Lage sein alle fachlichen Anforderunggen zu erfüllen
-	* Das System muss für die verschiedenen Benutzer eine an- und abmeldung ermöglichen
-	* Das System muss dem Benutzer, nur die für die Rolle vorgesehen Funktionalität ermöglchen
-	* Das System muss den Mitarbeitern der Behörde ermöglichen das sie mehrere Benutzerrollen einnehmen können, damit sie ihre Aufgaben wahrnehmen können
+	* Das System muss den verschiedenen Benutzern, gemäß ihrer Rolle, die Möglichkeit bieten, Datensätze zu erfassen, zu ändern und zu Löschen
+	* Das System muss in der Lage sein, alle fachlichen Anforderunggen zu erfüllen
+	* Das System muss für die verschiedenen Benutzer eine An- und Abmeldung ermöglichen
+	* Das System muss dem Benutzer nur die für die Rolle vorgesehen Funktionalität ermöglchen
+	* Das System muss den Mitarbeitern der Behörde ermöglichen, dass sie mehrere Benutzerrollen einnehmen können, damit sie ihre Aufgaben wahrnehmen können
 
 >+ **Administration des Systems**
 	* Das System wird von der Behörde administriert
