@@ -204,7 +204,7 @@ gehört zu&gt;</panel_attributes>
       <h>288</h>
     </coordinates>
     <panel_attributes>lt=-
-m1=1..1
+m1=0..1
 m2=0..*
 bewertet&gt;</panel_attributes>
     <additional_attributes>56;24;56;272;136;272</additional_attributes>
