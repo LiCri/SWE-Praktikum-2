@@ -32,8 +32,9 @@ Ein Mitarbeiter kann im System folgende Funktionen ausüben:
 1. Bestätigung der von den Herstellern angemeldeten Medikamente
 2. Bewertung der von den Ärzten eingetragenen Ereignisse und dahingehend Bewertung der Medikamente
 3. (De)aktivierung der Ärzte-Accounts
-4. Datenpflege
-5. Administrative Aufgaben
+4. Bestätigen der Hersteller
+5. Datenpflege
+6. Administrative Aufgaben
 
 Je nach Befugnis werden einem Behördenmitarbeiter ein oder mehrere Benutzerkreis(e) zugewiesen, welche unterschiedliche Rechte verleihen (s. unten).
 
@@ -44,7 +45,7 @@ Die Benutzerkreise können beliebig kombiniert werden.
 ### Hersteller
 Hersteller erben von *User* und implementieren zusätzlich Namen und Anschrift.
 
-Ein Hersteller kann beliebig viele Medikamente anmelden.
+Ein Hersteller kann beliebig viele Medikamente anmelden. Um mit dem System interagieren zu können, muss der *Hersteller*-Account von einem *Behördenmitarbeiter* aktiviert worden sein.
 
 ### Arzt
 Ärzte erben von *User* und implementieren zusätzlich Vorname, Nachname, Spezialisierung und Anschrift.
@@ -63,7 +64,7 @@ Jedem Ereignis wird genau ein *Medikament* und mindestens eine *Kategorie* zugeo
 Eingetragene Ereignisse können von einem Behördenmitarbeiter bewertet werden.
 
 ### Kategorie
-Eine *Kategorie* spezifiziert ein *Ereignis*. 
+Eine *Kategorie* spezifiziert ein *Ereignis* und wird von einem *Behördenmitarbeiter* eingetragen.
 
 ### Statusänderung
 Eine *Statusänderung* kann von einem *Behördenmitarbeiter* hinzugefügt werden und bezieht sich immer auf einen Arzt. Es bewirkt die Änderung des aktiv-Flags. 
@@ -102,6 +103,7 @@ Für die Statusänderung muss ein Grund angegeben werden.
 |id			|int	|
 |name		|string	|
 |anschrift	|string	|
+|bestätigt	|bool	|
 
 ### Arzt
 
@@ -129,8 +131,9 @@ Für die Statusänderung muss ein Grund angegeben werden.
 |Attribut	|Typ	|
 |-----------|-------|
 |id			|int	|
-|beschreibung|stirng|
-|wertung	|int	|
+|beschreibung|string|
+|priorität	|int	|
+|zeitpunkt	|date	|
 
 ### Kategorie
 
@@ -138,6 +141,7 @@ Für die Statusänderung muss ein Grund angegeben werden.
 |-----------|-------|
 |id			|int	|
 |bezeichnung|string	|
+|mitarbeiter_id|int |
 
 ### Ereignis_Kategorie
 
@@ -150,7 +154,7 @@ Für die Statusänderung muss ein Grund angegeben werden.
 |Attribut	|Typ	|
 |-----------|-------|
 |id			|int	|
-|behördenMA_id|int  |
+|mitarbeiter_id|int  |
 |arzt_id	|int	|
 |grund		|string	|
 |datum		|datetime|
