@@ -29,11 +29,11 @@ Behördenmitarbeiter erben von *User* und speichern zusätzlich Vor- und Nachnam
 
 Ein Mitarbeiter kann im System mehrere Funktionen ausüben:
 
-    1. Bestätigung der von den Herstellern angemeldeten Medikamente
-    2. Bewertung der von den Ärzten eingetragenen Ereignisse
-    3. (De)aktivierung der Ärzte-Accounts
-    4. Datenpflege
-    5. Administrative Aufgaben
+1. Bestätigung der von den Herstellern angemeldeten Medikamente
+2. Bewertung der von den Ärzten eingetragenen Ereignisse
+3. (De)aktivierung der Ärzte-Accounts
+4. Datenpflege
+5. Administrative Aufgaben
 
 Je nach Befugnis wird einem Behördenmitarbeiter ein oder mehrere Benutzerkreis(e) zugewiesen, welche unterschiedliche Rechte verleihen (s. unten).
 
