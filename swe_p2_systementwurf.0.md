@@ -179,15 +179,44 @@ Für die Statusänderung muss ein Grund angegeben werden.
 
 ### Beschreibung
 
+*	(externes) Melderegister:
+	Stellt die zum Abgleichen benötigten externen Daten zur Verfügung.
 
+*	Hardwerzugriffsschicht:
+	Gewährleistet den Hardwarezugriff auf die Daten.
 
-### Komponenten des Meldeverfahren
+*	DBMS:
+	Verwaltet die Datenbank per PostgresSQL. Es sind Standart Zugriffe möglich, wie lesen, schreiben und löschen.
+
+*	Webserver:
+	Stellt die Webaplikation Meldeverfahren zur Verfügung und leiten die externen/internen Datenzugriffe an sie weiter.
+
+*	Meldeverfahren:
+	Die Webaplikation, welche dem Benutzer die gewünschten Funktionen zur Verfügung stellt und seine Eingaben verarbeitet.
+
+*	Webbrowser:
+	Beliebiger Webbrowser, der die Benutzereingaben an den Webserver schickt und die gewünschten Funktionen für den Benutzer zur Darstellung bringt. 
+
+### Komponenten des Meldeverfahrens
 
 ![Komponenten](./Diagramme/Meldeverfahren.jpeg)
+
+*	Benutzerschnittstelle:
+	Liefert die Benutzerfunktionen durch der von der Authentifizierung geliferten für den aktuellen Benutzer freigegebenen Funktionen und greift durch die Aplikationslogik auf diese zu.
+
+*	Aplikationslogik:
+	Liefert Funktions zugriff auf die von der benutzerschnittstelle benötigten Funktionen.
+
+*	Authentifizierung:
+	Authentifiziert den benutzer und gibt der Benutzerschnittstelle an welche Funktionen dieser zur Verfügung hat.
 
 ### Komponenten der Benutzerschnittstelle
 
 ![Komponenten](./Diagramme/Benutzerschnittstelle.jpeg)
+
+* Funktionen vorbereiten
+
+* Benutzerfunktion
 
 ![Komponenten](./Wireframes/Arzt_registrieren.png)
 
@@ -199,9 +228,28 @@ Für die Statusänderung muss ein Grund angegeben werden.
 
 ![Komponenten](./Diagramme/Authentifizierung.jpeg)
 
+* Registrieren/Einlogen
+
+* Registrierung/Login prüfen
+
+* Funktionen freigeben
+
 ### Komponenten der Aplikationslogik
 
 ![Komponenten](./Diagramme/Aplikationslogik.jpeg)
+
+* externer Daten zugriff
+
+* interne Daten verwalten
+
+* Funktionen Medikamente
+
+* Funktionen Datenpflege
+
+* Funktionen DV
+
+* Funktionen
+
 
 
 
