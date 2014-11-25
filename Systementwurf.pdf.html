@@ -164,6 +164,11 @@
      padding-left: 1.5em;
   }
   
+  img {
+    height: 785px;
+    width: 720px; 
+  }
+  
   /* EOF */
   </style>
   <style type="text/css">
@@ -263,7 +268,11 @@ swe_p2_systementwurf.0.md<br/>rev. 0 / 23.11.2014<br/><span class="tr-page"></sp
 <p>Einem Behördenmitarbeiter muss mindestens ein Benutzerkreis zugeordenet werden. Es existieren Benutzerkreise für die im Abschnitt <em>Behördenmitarbeiter</em> genannten Funktionen. Die Benutzerkreise können beliebig kombiniert werden.</p>
 <h3 id="hersteller"><span class="header-section-number">1.2.4</span> Hersteller</h3>
 <p>Hersteller erben von <em>User</em> und implementieren zusätzlich Namen und Anschrift.</p>
+<<<<<<< HEAD
 <p>Ein Hersteller kann beliebig viele Medikamente anmelden. Um mit dem System interagieren zu können, muss der <em>Hersteller</em>-Account von einem <em>Behördenmitarbeiter</em> aktiviert worden sein.</p>
+=======
+<p>Ein Hersteller kann beliebig viele Medikamente anmelden.</p>
+>>>>>>> 1ad84286811cc7692b699aad7b9652f2df0670b7
 <h3 id="arzt"><span class="header-section-number">1.2.5</span> Arzt</h3>
 <p>Ärzte erben von <em>User</em> und implementieren zusätzlich Vorname, Nachname, Spezialisierung und Anschrift.</p>
 <p>Ein Arzt ist dafür zuständig Ereignisse zu Medikamenten einzutragen. Sein Status kann von Behördenmitarbeitern mit entsprechenden Rechten unter Angabe eines Grundes aktiviert oder deaktiviert werden.</p>
@@ -273,7 +282,11 @@ swe_p2_systementwurf.0.md<br/>rev. 0 / 23.11.2014<br/><span class="tr-page"></sp
 <p>Ein Ereignis wird von einem <em>Arzt</em> eingetragen und enthält weitere Informationen, welche von diesem eingetragen werden (Beschreibung und Wertung). Jedem Ereignis wird genau ein <em>Medikament</em> und mindestens eine <em>Kategorie</em> zugeordnet.</p>
 <p>Eingetragene Ereignisse können von einem Behördenmitarbeiter bewertet werden.</p>
 <h3 id="kategorie"><span class="header-section-number">1.2.8</span> Kategorie</h3>
+<<<<<<< HEAD
 <p>Eine <em>Kategorie</em> spezifiziert ein <em>Ereignis</em> und wird von einem <em>Behördenmitarbeiter</em> eingetragen.</p>
+=======
+<p>Eine <em>Kategorie</em> spezifiziert ein <em>Ereignis</em>.</p>
+>>>>>>> 1ad84286811cc7692b699aad7b9652f2df0670b7
 <h3 id="statusänderung"><span class="header-section-number">1.2.9</span> Statusänderung</h3>
 <p>Eine <em>Statusänderung</em> kann von einem <em>Behördenmitarbeiter</em> hinzugefügt werden und bezieht sich immer auf einen Arzt. Es bewirkt die Änderung des aktiv-Flags. Für die Statusänderung muss ein Grund angegeben werden.</p>
 <h2 id="umwandlung-in-relationales-datenmodell"><span class="header-section-number">1.3</span> Umwandlung in relationales Datenmodell</h2>
@@ -367,10 +380,13 @@ swe_p2_systementwurf.0.md<br/>rev. 0 / 23.11.2014<br/><span class="tr-page"></sp
 <td align="left">anschrift</td>
 <td align="left">string</td>
 </tr>
+<<<<<<< HEAD
 <tr class="even">
 <td align="left">bestätigt</td>
 <td align="left">bool</td>
 </tr>
+=======
+>>>>>>> 1ad84286811cc7692b699aad7b9652f2df0670b7
 </tbody>
 </table>
 <h3 id="arzt-1"><span class="header-section-number">1.3.5</span> Arzt</h3>
@@ -434,7 +450,11 @@ swe_p2_systementwurf.0.md<br/>rev. 0 / 23.11.2014<br/><span class="tr-page"></sp
 <td align="left">bool</td>
 </tr>
 <tr class="odd">
+<<<<<<< HEAD
 <td align="left">bewertung</td>
+=======
+<td align="left">Bewertung</td>
+>>>>>>> 1ad84286811cc7692b699aad7b9652f2df0670b7
 <td align="left">string</td>
 </tr>
 </tbody>
@@ -454,6 +474,7 @@ swe_p2_systementwurf.0.md<br/>rev. 0 / 23.11.2014<br/><span class="tr-page"></sp
 </tr>
 <tr class="even">
 <td align="left">beschreibung</td>
+<<<<<<< HEAD
 <td align="left">string</td>
 </tr>
 <tr class="odd">
@@ -464,6 +485,14 @@ swe_p2_systementwurf.0.md<br/>rev. 0 / 23.11.2014<br/><span class="tr-page"></sp
 <td align="left">zeitpunkt</td>
 <td align="left">date</td>
 </tr>
+=======
+<td align="left">stirng</td>
+</tr>
+<tr class="odd">
+<td align="left">wertung</td>
+<td align="left">int</td>
+</tr>
+>>>>>>> 1ad84286811cc7692b699aad7b9652f2df0670b7
 </tbody>
 </table>
 <h3 id="kategorie-1"><span class="header-section-number">1.3.8</span> Kategorie</h3>
@@ -483,10 +512,13 @@ swe_p2_systementwurf.0.md<br/>rev. 0 / 23.11.2014<br/><span class="tr-page"></sp
 <td align="left">bezeichnung</td>
 <td align="left">string</td>
 </tr>
+<<<<<<< HEAD
 <tr class="odd">
 <td align="left">mitarbeiter_id</td>
 <td align="left">int</td>
 </tr>
+=======
+>>>>>>> 1ad84286811cc7692b699aad7b9652f2df0670b7
 </tbody>
 </table>
 <h3 id="ereignis_kategorie"><span class="header-section-number">1.3.9</span> Ereignis_Kategorie</h3>
@@ -522,7 +554,11 @@ swe_p2_systementwurf.0.md<br/>rev. 0 / 23.11.2014<br/><span class="tr-page"></sp
 <td align="left">int</td>
 </tr>
 <tr class="even">
+<<<<<<< HEAD
 <td align="left">mitarbeiter_id</td>
+=======
+<td align="left">behördenMA_id</td>
+>>>>>>> 1ad84286811cc7692b699aad7b9652f2df0670b7
 <td align="left">int</td>
 </tr>
 <tr class="odd">

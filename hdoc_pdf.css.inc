@@ -155,5 +155,10 @@ blockquote {
    padding-left: 1.5em;
 }
 
+img {
+  height: 785px;
+  width: 720px; 
+}
+
 /* EOF */
 </style>
