@@ -172,3 +172,36 @@ Für die Statusänderung muss ein Grund angegeben werden.
 |arzt_id	|int	|
 |grund		|string	|
 |datum		|datetime|
+
+## Komponenten
+
+![Komponenten](./Diagramme/uml-komponentendiagramm.jpeg)
+
+### Beschreibung
+
+
+
+### Komponenten des Meldeverfahren
+
+![Komponenten](./Diagramme/Meldeverfahren.jpeg)
+
+### Komponenten der Benutzerschnittstelle
+
+![Komponenten](./Diagramme/Benutzerschnittstelle.jpeg)
+
+![Komponenten](./Wireframes/Arzt_registrieren.png)
+
+![Komponenten](./Wireframes/Ereignis_melden.png)
+
+![Komponenten](./Wireframes/Medikament_Registrieren.png)
+
+### Komponenten der Authentifizierung
+
+![Komponenten](./Diagramme/Authentifizierung.jpeg)
+
+### Komponenten der Aplikationslogik
+
+![Komponenten](./Diagramme/Aplikationslogik.jpeg)
+
+
+
