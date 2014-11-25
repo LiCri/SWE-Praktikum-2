@@ -55,13 +55,16 @@ Ein Arzt ist dafür zuständig Ereignisse zu Medikamenten einzutragen. Sein Stat
 ### Medikament
 Ein Medikament wird von *einem* Hersteller eingetragen und kann anschließend von einem Behördenmitarbeiter bestätigt werden.
 Weiterhin kann ein Medikament beliebig vielen *Ereignissen* zugeordnet werden.
-Ein Medikament wird von einem Behördenmitarbeiter anhand der dafür eingetragenen *Ereignisse* bewertet.
 
 ### Ereignis
 Ein Ereignis wird von einem *Arzt* eingetragen und enthält weitere Informationen, welche von diesem eingetragen werden (Beschreibung und Wertung).
 Jedem Ereignis wird genau ein *Medikament* und mindestens eine *Kategorie* zugeordnet.
 
 Eingetragene Ereignisse können von einem Behördenmitarbeiter bewertet werden.
+
+### Bewertung
+Pro Medikament kann von einem *Behördenmitarbeiter* eine Bewertung eingetragen werden. Diese wird anhand der vorliegenden *Ereignisse* festgelegt.
+Die *Bewertung* besteht aus einem Kommentar und einer Wertung.
 
 ### Kategorie
 Eine *Kategorie* spezifiziert ein *Ereignis* und wird von einem *Behördenmitarbeiter* eingetragen.
@@ -125,7 +128,6 @@ Für die Statusänderung muss ein Grund angegeben werden.
 |name		|string	|
 |beschreibung|string|
 |bestätigt	|bool	|
-|bewertung	|string	|
 
 ### Ereignis
 
@@ -137,6 +139,14 @@ Für die Statusänderung muss ein Grund angegeben werden.
 |beschreibung|string|
 |priorität	|int	|
 |zeitpunkt	|date	|
+
+### Bewertung
+
+|Attribut	|Typ	|
+|-----------|-------|
+|ereignis_id|int	|
+|kommentar	|string	|
+|wertung	|int	|
 
 ### Kategorie
 
