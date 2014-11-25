@@ -145,6 +145,7 @@ Für die Statusänderung muss ein Grund angegeben werden.
 |Attribut	|Typ	|
 |-----------|-------|
 |ereignis_id|int	|
+|mitarbeiter_id|int	|
 |kommentar	|string	|
 |wertung	|int	|
 
