@@ -220,11 +220,11 @@ Für die Statusänderung muss ein Grund angegeben werden.
 *	Benutzerfunktion:
 	Nimmt die für den Benutzer freigegebenen Funktionen und visualisiert sie mithilfe des gerade benötigten Formulars.
 	Unter anderem sehen die Formulare folgendermaßen aus:
-	* Registrierungsformular für Ärzte:
+	* Registrierungsformular für Ärzte:   
 	![Registrierung für Ärzte](./Wireframes/Arzt_registrieren.png)
-	* Meldeformular:
+	* Meldeformular:   
 	![Ereignis melden](./Wireframes/Ereignis_melden.png)
-	* Registrierungsformular für Medikamente:
+	* Registrierungsformular für Medikamente:   
 	![Medikament Registrierung](./Wireframes/Medikament_Registrieren.png)
 
 ### Komponenten der Authentifizierung
