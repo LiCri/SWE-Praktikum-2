@@ -588,7 +588,7 @@ swe_p2_systementwurf.0.md<br/>rev. 0 / 23.11.2014<br/><span class="tr-page"></sp
 <h3 id="beschreibung-1"><span class="header-section-number">1.4.1</span> Beschreibung</h3>
 <ul>
 <li><p>(externes) Melderegister: Stellt die zum Abgleichen benötigten externen Daten zur Verfügung.</p></li>
-<li><p>Hardwaerzugriffsschicht: Gewährleistet den Hardwarezugriff auf die Daten.</p></li>
+<li><p>Hardwarezugriffsschicht: Gewährleistet den Hardwarezugriff auf die Daten.</p></li>
 <li><p>DBMS: Verwaltet die Datenbank per PostgresSQL. Es sind Standart Zugriffe möglich, wie lesen, schreiben und löschen.</p></li>
 <li><p>Webserver: Stellt die Webaplikation Meldeverfahren zur Verfügung und leiten die externen/internen Datenzugriffe an sie weiter.</p></li>
 <li><p>Meldeverfahren: Die Webaplikation, welche dem Benutzer die gewünschten Funktionen zur Verfügung stellt und seine Eingaben verarbeitet.</p></li>
@@ -596,7 +596,7 @@ swe_p2_systementwurf.0.md<br/>rev. 0 / 23.11.2014<br/><span class="tr-page"></sp
 </ul>
 <h3 id="komponenten-des-meldeverfahrens"><span class="header-section-number">1.4.2</span> Komponenten des Meldeverfahrens</h3>
 <div class="figure">
-<img src="./Diagramme/Meldeverfahren.png" alt="Komponenten" /><p class="caption">Komponenten</p>
+<img src="./Diagramme/Meldeverfahren.png" alt="Meldeverfahren" /><p class="caption">Meldeverfahren</p>
 </div>
 <ul>
 <li><p>Benutzerschnittstelle: Liefert die Benutzerfunktionen durch der von der Authentifizierung geliferten für den aktuellen Benutzer freigegebenen Funktionen und greift durch die Applikationslogik auf diese zu.</p></li>
@@ -605,41 +605,43 @@ swe_p2_systementwurf.0.md<br/>rev. 0 / 23.11.2014<br/><span class="tr-page"></sp
 </ul>
 <h3 id="komponenten-der-benutzerschnittstelle"><span class="header-section-number">1.4.3</span> Komponenten der Benutzerschnittstelle</h3>
 <div class="figure">
-<img src="./Diagramme/Benutzerschnittstelle.png" alt="Komponenten" /><p class="caption">Komponenten</p>
+<img src="./Diagramme/Benutzerschnittstelle.png" alt="Benutzerschnittstelle" /><p class="caption">Benutzerschnittstelle</p>
 </div>
 <ul>
-<li><p>Funktionen vorbereiten</p></li>
-<li><p>Benutzerfunktion</p></li>
+<li><p>Funktionen vorbereiten: Zieht die nicht für den gerade eingelogten Nutzer bestimmten Funktionen von den zur Verfügung stehenden Funktionen ab und gibt diese zur Visualisierung an Benutzerfunktionen weiter.</p></li>
+<li>Benutzerfunktion: Nimmt die für den Benutzer freigegebenen Funktionen und visualisiert sie mithilfe des gerade benötigten Formulars. Unter anderem sehen die Formulare folgendermaßen aus:
+<ul>
+<li>Registrierungsformular für Ärzte:<br /><img src="./Wireframes/Arzt_registrieren.png" alt="Registrierung für Ärzte" /></li>
+<li>Meldeformular:<br /><img src="./Wireframes/Ereignis_melden.png" alt="Ereignis melden" /></li>
+<li>Registrierungsformular für Medikamente:<br /><img src="./Wireframes/Medikament_Registrieren.png" alt="Medikament Registrierung" /></li>
+</ul></li>
 </ul>
-<div class="figure">
-<img src="./Wireframes/Arzt_registrieren.png" alt="Komponenten" /><p class="caption">Komponenten</p>
-</div>
-<div class="figure">
-<img src="./Wireframes/Ereignis_melden.png" alt="Komponenten" /><p class="caption">Komponenten</p>
-</div>
-<div class="figure">
-<img src="./Wireframes/Medikament_Registrieren.png" alt="Komponenten" /><p class="caption">Komponenten</p>
-</div>
 <h3 id="komponenten-der-authentifizierung"><span class="header-section-number">1.4.4</span> Komponenten der Authentifizierung</h3>
 <div class="figure">
-<img src="./Diagramme/Authentifizierung.png" alt="Komponenten" /><p class="caption">Komponenten</p>
+<img src="./Diagramme/Authentifizierung.png" alt="Authentifizierung" /><p class="caption">Authentifizierung</p>
 </div>
 <ul>
-<li><p>Registrieren/Einlogen</p></li>
-<li><p>Registrierung/Login prüfen</p></li>
-<li><p>Funktionen freigeben</p></li>
+<li><p>Registrieren/Einlogen: Stellt dem Benutzer eine Registrierung zur Verfügung, oder liefert den Login falls vorhanden.</p></li>
+<li><p>Registrierung/Login prüfen: Abgleichung und Eintragung der Registrierung, oder falls Login schon vorhanden Abgleichung mit der Datenbank.</p></li>
+<li><p>Funktionen freigeben: Wenn der Login oder die Registrierung bestätigt ist, wird geliefert welche Funktionen diesem Benutzer zur Verfügung stehen sollten.</p></li>
 </ul>
 <h3 id="komponenten-der-aplikationslogik"><span class="header-section-number">1.4.5</span> Komponenten der Aplikationslogik</h3>
 <div class="figure">
-<img src="./Diagramme/Anwendungslogik.png" alt="Komponenten" /><p class="caption">Komponenten</p>
+<img src="./Diagramme/Anwendungslogik.png" alt="Anwendungslogik" /><p class="caption">Anwendungslogik</p>
 </div>
 <ul>
-<li><p>externer Daten zugriff</p></li>
-<li><p>interne Daten verwalten</p></li>
-<li><p>Funktionen Medikamente</p></li>
-<li><p>Funktionen Datenpflege</p></li>
-<li><p>Funktionen DV</p></li>
-<li><p>Funktionen</p></li>
+<li><p>externer Daten zugriff: Aufbereitung und Filterung der externen Daten.</p></li>
+<li><p>interne Daten verwalten: Liefert Datenbank zugriff (löschen, ändern , erstellen) und filter sie und bereitet sie für die Verwendung auf.</p></li>
+<li>Funktionen Medikamente: Stellt die Funktionen für alles was Medikamente betrifft zur Verfügung. Dies Beinhaltet:
+<ul>
+<li>Medikamente registrieren</li>
+<li>Medikamente bestätigen</li>
+<li>Medikamente bewerten</li>
+<li>Ereignisse zu Medikamenten melden</li>
+</ul></li>
+<li><p>Funktionen Datenpflege: Beinhalten die Funktionen zur Datenpflege.</p></li>
+<li><p>Funktionen DV: Beinhalten die administrativen Funktionen.</p></li>
+<li><p>Funktionen: Fasst sämtliche Funktionen zusammen und stellt diese zur Verfügung.</p></li>
 </ul>
 </body>
 </html>
