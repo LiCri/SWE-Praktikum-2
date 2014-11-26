@@ -199,7 +199,7 @@ Für die Statusänderung muss ein Grund angegeben werden.
 
 ### Komponenten des Meldeverfahrens
 
-![Komponenten](./Diagramme/Meldeverfahren.png)
+![Meldeverfahren](./Diagramme/Meldeverfahren.png)
 
 *	Benutzerschnittstelle:
 	Liefert die Benutzerfunktionen durch der von der Authentifizierung geliferten für den aktuellen Benutzer freigegebenen Funktionen und greift durch die Applikationslogik auf diese zu.
@@ -212,43 +212,59 @@ Für die Statusänderung muss ein Grund angegeben werden.
 
 ### Komponenten der Benutzerschnittstelle
 
-![Komponenten](./Diagramme/Benutzerschnittstelle.png)
+![Benutzerschnittstelle](./Diagramme/Benutzerschnittstelle.png)
 
-* Funktionen vorbereiten
+*	Funktionen vorbereiten:
+	Zieht die nicht für den gerade eingelogten Nutzer bestimmten Funktionen von den zur Verfügung stehenden Funktionen ab und gibt diese zur Visualisierung an Benutzerfunktionen weiter.
 
-* Benutzerfunktion
-
-![Komponenten](./Wireframes/Arzt_registrieren.png)
-
-![Komponenten](./Wireframes/Ereignis_melden.png)
-
-![Komponenten](./Wireframes/Medikament_Registrieren.png)
+*	Benutzerfunktion:
+	Nimmt die für den Benutzer freigegebenen Funktionen und visualisiert sie mithilfe des gerade benötigten Formulars.
+	Unter anderem sehen die Formulare folgendermaßen aus:
+	* Registrierungsformular für Ärzte:   
+	![Registrierung für Ärzte](./Wireframes/Arzt_registrieren.png)
+	* Meldeformular:   
+	![Ereignis melden](./Wireframes/Ereignis_melden.png)
+	* Registrierungsformular für Medikamente:   
+	![Medikament Registrierung](./Wireframes/Medikament_Registrieren.png)
 
 ### Komponenten der Authentifizierung
 
-![Komponenten](./Diagramme/Authentifizierung.png)
+![Authentifizierung](./Diagramme/Authentifizierung.png)
 
-* Registrieren/Einlogen
+*	Registrieren/Einlogen:
+	Stellt dem Benutzer eine Registrierung zur Verfügung, oder liefert den Login falls vorhanden.
 
-* Registrierung/Login prüfen
+*	Registrierung/Login prüfen:
+	Abgleichung und Eintragung der Registrierung, oder falls Login schon vorhanden Abgleichung mit der Datenbank.
 
-* Funktionen freigeben
+*	Funktionen freigeben:
+	Wenn der Login oder die Registrierung bestätigt ist, wird geliefert welche Funktionen diesem Benutzer zur Verfügung stehen sollten.
 
 ### Komponenten der Aplikationslogik
 
-![Komponenten](./Diagramme/Anwendungslogik.png)
+![Anwendungslogik](./Diagramme/Anwendungslogik.png)
 
-* externer Daten zugriff
+*	externer Daten zugriff:
+	Aufbereitung und Filterung der externen Daten.
 
-* interne Daten verwalten
+*	interne Daten verwalten:
+	Liefert Datenbank zugriff (löschen, ändern , erstellen) und filter sie und bereitet sie für die Verwendung auf. 
 
-* Funktionen Medikamente
+*	Funktionen Medikamente:
+	Stellt die Funktionen für alles was Medikamente betrifft zur Verfügung. Dies Beinhaltet:
+	*	Medikamente registrieren 
+	*	Medikamente bestätigen
+	*	Medikamente bewerten
+	*	Ereignisse zu Medikamenten melden 
 
-* Funktionen Datenpflege
+*	Funktionen Datenpflege:
+	Beinhalten die Funktionen zur Datenpflege.
 
-* Funktionen DV
+*	Funktionen DV:
+	Beinhalten die administrativen Funktionen.
 
-* Funktionen
+* 	Funktionen:
+	Fasst sämtliche Funktionen zusammen und stellt diese zur Verfügung.
 
 
 
