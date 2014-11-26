@@ -19,25 +19,31 @@ lang: de
 Die sprachliche Analyse der Anforderungen erfolgt nach den Regeln der RUPP/SOPHIST Group.   
 Die angegebenen Anforderungen sind zum Teil sehr unklar und bedürfen einer genaueren Untersuchung.   
 
-Im ersten Punkt ist definiert, dass der "Hersteller von Medikamenten" seine Medikamente zur Bewertung anmelden soll, desweiteren ist beschrieben, dass die Anmeldung über eine Zulassungsbehörde erfolgen soll. Daraus lassen sich keine Informationen über die Art und Weise ableiten, also ob die Anmeldung über das System stattfinden soll oder nicht. Es ist auch gefordert, dass das Medikament von der Zulassungsbehörde bestätigt werden muss, jedoch ist nicht definiert, wie dies passieren soll. Hier muss noch eine genauere Definition erfolgen. Aus dieser Anforderung lassen sich 2 Akteure definieren: der Hersteller von Medikamenten und die Zulassungsbehörde.   
+Im ersten Punkt ist definiert, dass der "Hersteller von Medikamenten" seine Medikamente zur Bewertung anmelden soll, desweiteren ist beschrieben, dass die Anmeldung über eine Zulassungsbehörde erfolgen soll. Daraus lassen sich keine Informationen über die Art und Weise ableiten, also ob die Anmeldung über das System stattfinden soll oder nicht. Es ist auch gefordert, dass das Medikament von der Zulassungsbehörde bestätigt werden muss, jedoch ist nicht definiert, wie dies passieren soll. Hier muss noch eine genauere Definition erfolgen.
 
-Im zweitem Punkt wird gefordert, dass die Ärzte die Auffälligkeiten bei der Anwendung der Medikamente als Ereignisse erfassen. Dafür soll vorher eine Registrierung der Ärzte beim Meldeverfahren stattfinden, hier fehlt aber auch jegliche Information darüber, wie die Registrierung stattfinden soll. Gefordert ist ebenso, dass die Behörde das Konto unter Angabe eines Grundes deaktivieren und auch wieder aktivieren kann. Nun kommt die Rolle des Arztes hinzu.   
+Im zweitem Punkt wird gefordert, dass die Ärzte die Auffälligkeiten bei der Anwendung der Medikamente als Ereignisse erfassen. Dafür soll vorher eine Registrierung der Ärzte beim Meldeverfahren stattfinden, hier fehlt aber auch jegliche Information darüber, wie die Registrierung stattfinden soll. Gefordert ist ebenso, dass die Behörde das Konto unter Angabe eines Grundes deaktivieren und auch wieder aktivieren kann.   
 
 Im dritten Punkt der Anforderung ist die Bewertung der Medikamente für die Behörde festgelegt, das soll anhand der Ereignisse durchgeführt werden. Es fehlt auch hier die Spezifikation, ob die Behörde das manuell macht oder ob einiges Automatisiert werden soll.   
 
 Als weiterer Punkt ist festgelegt, dass die Kategorien duch die Behörde vorgegeben werden und als Wertekatalog erfasst werden sollen.   
 Es soll ebenso verschiedene Auswertungen geben, die je nach Rolle unterschiedlich sind - hier fehlt jedoch eine Angabe darüber, was genau angezeigt werden soll. Ein Beispiel für die unklar definierte Anforderung ist z.B. direkt in der ersten geforderten Auswertung. Es ist gewollt, dass der Hersteller eine Liste der eigenen Medikamente mit Ereignissen zur Verfügung stehen soll, aber es ist nicht definiert, welche Datenfelder für den Hersteller zu sehen sein sollen.
 
+Insgesammt lassen sich aus den genannten Anforderungen 3 Akteure definieren:
+
+>* Zulassungsbehörde
+>* Arzt
+>* Hersteller
+
 Die oben genannten Punkte werden im nächsten Abschnitt etwas präziser und eindeutig formuliert.
 
 ##Offene Fragen bei der Anforderung
 Anhand der vorliegenden Mängel in der Formulierung der Anforderungen für das Meldeverfahren ergeben sich folgende offen Fragen:
 
->*Wie soll die Anmeldung stattfinden? Schriftlich oder über das System?*   
->*Wie soll eine Medikamentenanmeldung, welche von der Behörde eine Zustimmung erhalten hat, an den Hersteller bestätigt werden?*   
->*Sollen sich die Ärzte selbst im System registrieren, oder bekommen sie einen festen Account mit einem Initialpasswort zugeschickt?*   
->*Soll eine spezielle Bewertungsmaske implementiert werden?*   
->*Sollen die Benutzer selbst entscheiden, welche Rolle sie einnehmen?*   
+>* Wie soll die Anmeldung stattfinden? Schriftlich oder über das System?*   
+>* Wie soll eine Medikamentenanmeldung, welche von der Behörde eine Zustimmung erhalten hat, an den Hersteller bestätigt werden?*   
+>* Sollen sich die Ärzte selbst im System registrieren, oder bekommen sie einen festen Account mit einem Initialpasswort zugeschickt?*   
+>* Soll eine spezielle Bewertungsmaske implementiert werden?*   
+>* Sollen die Benutzer selbst entscheiden, welche Rolle sie einnehmen?*   
 
 #Neudefinition der Anforderungen für das Meldeverfahren
 **Die Anwendung "Meldeverfahren" dient dazu, Auffälligkeiten bei der Anwendung von Medikamenten zu erfassen und zu bewerten. Dazu sind folgende fachlichen Anforderungen zu berücksichtigen:**   
