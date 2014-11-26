@@ -156,8 +156,8 @@ blockquote {
 }
 
 img {
-  height: 785px;
-  width: 720px; 
+  height: 95%;
+  width: 95%; 
 }
 
 /* EOF */

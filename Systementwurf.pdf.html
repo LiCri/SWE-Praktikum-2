@@ -165,8 +165,8 @@
   }
   
   img {
-    height: 785px;
-    width: 720px; 
+    height: 95%;
+    width: 95%; 
   }
   
   /* EOF */
@@ -468,7 +468,7 @@ swe_p2_systementwurf.0.md<br/>rev. 0 / 23.11.2014<br/><span class="tr-page"></sp
 <td align="left">int</td>
 </tr>
 <tr class="even">
-<td align="left">beschreibung</td>
+<td align="left">Beschreibung</td>
 <td align="left">string</td>
 </tr>
 <tr class="odd">
@@ -588,7 +588,7 @@ swe_p2_systementwurf.0.md<br/>rev. 0 / 23.11.2014<br/><span class="tr-page"></sp
 <h3 id="beschreibung-1"><span class="header-section-number">1.4.1</span> Beschreibung</h3>
 <ul>
 <li><p>(externes) Melderegister: Stellt die zum Abgleichen benötigten externen Daten zur Verfügung.</p></li>
-<li><p>Hardwerzugriffsschicht: Gewährleistet den Hardwarezugriff auf die Daten.</p></li>
+<li><p>Hardwaerzugriffsschicht: Gewährleistet den Hardwarezugriff auf die Daten.</p></li>
 <li><p>DBMS: Verwaltet die Datenbank per PostgresSQL. Es sind Standart Zugriffe möglich, wie lesen, schreiben und löschen.</p></li>
 <li><p>Webserver: Stellt die Webaplikation Meldeverfahren zur Verfügung und leiten die externen/internen Datenzugriffe an sie weiter.</p></li>
 <li><p>Meldeverfahren: Die Webaplikation, welche dem Benutzer die gewünschten Funktionen zur Verfügung stellt und seine Eingaben verarbeitet.</p></li>
@@ -599,9 +599,9 @@ swe_p2_systementwurf.0.md<br/>rev. 0 / 23.11.2014<br/><span class="tr-page"></sp
 <img src="./Diagramme/Meldeverfahren.png" alt="Komponenten" /><p class="caption">Komponenten</p>
 </div>
 <ul>
-<li><p>Benutzerschnittstelle: Liefert die Benutzerfunktionen durch der von der Authentifizierung geliferten für den aktuellen Benutzer freigegebenen Funktionen und greift durch die Aplikationslogik auf diese zu.</p></li>
-<li><p>Aplikationslogik: Liefert Funktions zugriff auf die von der benutzerschnittstelle benötigten Funktionen.</p></li>
-<li><p>Authentifizierung: Authentifiziert den benutzer und gibt der Benutzerschnittstelle an welche Funktionen dieser zur Verfügung hat.</p></li>
+<li><p>Benutzerschnittstelle: Liefert die Benutzerfunktionen durch der von der Authentifizierung geliferten für den aktuellen Benutzer freigegebenen Funktionen und greift durch die Applikationslogik auf diese zu.</p></li>
+<li><p>Applikationslogik: Liefert Zugriff auf die von der Benutzerschnittstelle benötigten Funktionen.</p></li>
+<li><p>Authentifizierung: Authentifiziert den Benutzer und gibt der Benutzerschnittstelle an welche Funktionen dieser zur Verfügung hat.</p></li>
 </ul>
 <h3 id="komponenten-der-benutzerschnittstelle"><span class="header-section-number">1.4.3</span> Komponenten der Benutzerschnittstelle</h3>
 <div class="figure">

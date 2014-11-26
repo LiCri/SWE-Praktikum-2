@@ -182,7 +182,7 @@ Für die Statusänderung muss ein Grund angegeben werden.
 *	(externes) Melderegister:
 	Stellt die zum Abgleichen benötigten externen Daten zur Verfügung.
 
-*	Hardwaerzugriffsschicht:
+*	Hardwarezugriffsschicht:
 	Gewährleistet den Hardwarezugriff auf die Daten.
 
 *	DBMS:
