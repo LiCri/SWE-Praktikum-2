@@ -77,13 +77,13 @@ Für die Statusänderung muss ein Grund angegeben werden.
 
 ### User
 
-|Attribut	|Typ	|
-|-----------|-------|
-|id			|int	|
-|rolle_id	|int	|
-|email		|string	|
-|passwort	|string	|
-|registrierung|datetime|
+|Attribut	  |Typ		|
+|-------------|---------|
+|id			  |int		|
+|rolle_id	  |int		|
+|email		  |string	|
+|passwort	  |string	|
+|registrierung|datetime	|
 
 ### Benutzerkreis
 
@@ -94,10 +94,10 @@ Für die Statusänderung muss ein Grund angegeben werden.
 
 ### User_Benutzerkreis
 
-|Attribut	|Typ	|
-|-----------|-------|
-|user_id	|int	|
-|benutzerkreis_id|int|
+|Attribut		 |Typ	|
+|----------------|------|
+|user_id		 |int	|
+|benutzerkreis_id|int 	|
 
 ### Hersteller
 
@@ -121,57 +121,57 @@ Für die Statusänderung muss ein Grund angegeben werden.
 
 ### Medikament
 
-|Attribut	|Typ	|
-|-----------|-------|
-|id			|int	|
-|hersteller_id|int	|
-|name		|string	|
-|beschreibung|string|
-|bestätigt	|bool	|
+|Attribut		|Typ	|
+|---------------|-------|
+|id				|int	|
+|hersteller_id	|int	|
+|name		 	|string	|
+|beschreibung 	|string	|
+|bestätigt	 	|bool	|
 
 ### Ereignis
 
-|Attribut	|Typ	|
-|-----------|-------|
-|id			|int	|
-|medikament_id|int	|
-|arzt_id	|int	|
-|beschreibung|string|
-|priorität	|int	|
-|zeitpunkt	|date	|
+|Attribut		|Typ	|
+|---------------|-------|
+|id				|int	|
+|medikament_id 	|int	|
+|arzt_id		|int	|
+|Beschreibung 	|string	|
+|priorität		|int	|
+|zeitpunkt		|date	|
 
 ### Bewertung
 
-|Attribut	|Typ	|
-|-----------|-------|
-|ereignis_id|int	|
-|mitarbeiter_id|int	|
-|kommentar	|string	|
-|wertung	|int	|
+|Attribut		|Typ	|
+|---------------|-------|
+|ereignis_id	|int	|
+|mitarbeiter_id |int	|
+|kommentar		|string	|
+|wertung		|int	|
 
 ### Kategorie
 
-|Attribut	|Typ	|
-|-----------|-------|
-|id			|int	|
-|bezeichnung|string	|
-|mitarbeiter_id|int |
+|Attribut		|Typ	|
+|---------------|-------|
+|id				|int	|
+|bezeichnung	|string	|
+|mitarbeiter_id |int 	|
 
 ### Ereignis_Kategorie
 
-|Attribut	|Typ	|
-|-----------|-------|
-|ereignis_id|int	|
-|kategorie_id|int	|
+|Attribut		|Typ	|
+|---------------|-------|
+|ereignis_id	|int	|
+|kategorie_id 	|int	|
 
 ### Statusänderung
-|Attribut	|Typ	|
-|-----------|-------|
-|id			|int	|
-|mitarbeiter_id|int  |
-|arzt_id	|int	|
-|grund		|string	|
-|datum		|datetime|
+|Attribut		|Typ	 |
+|---------------|--------|
+|id				|int	 |
+|mitarbeiter_id |int 	 |
+|arzt_id		|int	 |
+|grund			|string	 |
+|datum			|datetime|
 
 ## Komponenten
 
@@ -182,7 +182,7 @@ Für die Statusänderung muss ein Grund angegeben werden.
 *	(externes) Melderegister:
 	Stellt die zum Abgleichen benötigten externen Daten zur Verfügung.
 
-*	Hardwerzugriffsschicht:
+*	Hardwaerzugriffsschicht:
 	Gewährleistet den Hardwarezugriff auf die Daten.
 
 *	DBMS:
@@ -202,13 +202,13 @@ Für die Statusänderung muss ein Grund angegeben werden.
 ![Komponenten](./Diagramme/Meldeverfahren.png)
 
 *	Benutzerschnittstelle:
-	Liefert die Benutzerfunktionen durch der von der Authentifizierung geliferten für den aktuellen Benutzer freigegebenen Funktionen und greift durch die Aplikationslogik auf diese zu.
+	Liefert die Benutzerfunktionen durch der von der Authentifizierung geliferten für den aktuellen Benutzer freigegebenen Funktionen und greift durch die Applikationslogik auf diese zu.
 
-*	Aplikationslogik:
-	Liefert Funktions zugriff auf die von der benutzerschnittstelle benötigten Funktionen.
+*	Applikationslogik:
+	Liefert Zugriff auf die von der Benutzerschnittstelle benötigten Funktionen.
 
 *	Authentifizierung:
-	Authentifiziert den benutzer und gibt der Benutzerschnittstelle an welche Funktionen dieser zur Verfügung hat.
+	Authentifiziert den Benutzer und gibt der Benutzerschnittstelle an welche Funktionen dieser zur Verfügung hat.
 
 ### Komponenten der Benutzerschnittstelle
 
