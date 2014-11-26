@@ -251,7 +251,7 @@ Für die Statusänderung muss ein Grund angegeben werden.
 	Liefert Datenbank zugriff (löschen, ändern , erstellen) und filter sie und bereitet sie für die Verwendung auf. 
 
 *	Funktionen Medikamente:
-	Stellt die Funktionen für alles was Medikamente betrifft zur Verfügung. Dies Beinhaltet:
+	Stellt die Funktionen für alles was Medikamente betrifft zur Verfügung.   Dies Beinhaltet:
 	*	Medikamente registrieren 
 	*	Medikamente bestätigen
 	*	Medikamente bewerten
