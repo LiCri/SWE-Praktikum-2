@@ -212,7 +212,7 @@ Für die Statusänderung muss ein Grund angegeben werden.
 
 ### Komponenten der Benutzerschnittstelle
 
-![Benutzerschnittstelle](./Diagramme/Benutzerschnittstelle.png)
+![Benutzerschnittstelle](./Diagramme/htmlgenerierung.png)
 
 *	Funktionen vorbereiten:
 	Zieht die nicht für den gerade eingelogten Nutzer bestimmten Funktionen von den zur Verfügung stehenden Funktionen ab und gibt diese zur Visualisierung an Benutzerfunktionen weiter.
