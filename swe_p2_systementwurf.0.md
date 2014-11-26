@@ -236,7 +236,7 @@ Für die Statusänderung muss ein Grund angegeben werden.
 
 ### Komponenten der Aplikationslogik
 
-![Komponenten](./Diagramme/Aplikationslogik.png)
+![Komponenten](./Diagramme/Anwendungslogik.png)
 
 * externer Daten zugriff
 
