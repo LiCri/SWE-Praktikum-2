@@ -175,7 +175,7 @@ Für die Statusänderung muss ein Grund angegeben werden.
 
 ## Komponenten
 
-![Komponenten](./Diagramme/uml-komponentendiagramm.jpeg)
+![Komponenten](./Diagramme/uml-komponentendiagramm.png)
 
 ### Beschreibung
 
@@ -199,7 +199,7 @@ Für die Statusänderung muss ein Grund angegeben werden.
 
 ### Komponenten des Meldeverfahrens
 
-![Komponenten](./Diagramme/Meldeverfahren.jpeg)
+![Komponenten](./Diagramme/Meldeverfahren.png)
 
 *	Benutzerschnittstelle:
 	Liefert die Benutzerfunktionen durch der von der Authentifizierung geliferten für den aktuellen Benutzer freigegebenen Funktionen und greift durch die Aplikationslogik auf diese zu.
@@ -212,7 +212,7 @@ Für die Statusänderung muss ein Grund angegeben werden.
 
 ### Komponenten der Benutzerschnittstelle
 
-![Komponenten](./Diagramme/Benutzerschnittstelle.jpeg)
+![Komponenten](./Diagramme/Benutzerschnittstelle.png)
 
 * Funktionen vorbereiten
 
@@ -226,7 +226,7 @@ Für die Statusänderung muss ein Grund angegeben werden.
 
 ### Komponenten der Authentifizierung
 
-![Komponenten](./Diagramme/Authentifizierung.jpeg)
+![Komponenten](./Diagramme/Authentifizierung.png)
 
 * Registrieren/Einlogen
 
@@ -236,7 +236,7 @@ Für die Statusänderung muss ein Grund angegeben werden.
 
 ### Komponenten der Aplikationslogik
 
-![Komponenten](./Diagramme/Aplikationslogik.jpeg)
+![Komponenten](./Diagramme/Aplikationslogik.png)
 
 * externer Daten zugriff
 
