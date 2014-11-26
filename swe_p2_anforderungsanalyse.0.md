@@ -80,7 +80,7 @@ Anhand der vorliegenden Mängel in der Formulierung der Anforderungen für das M
 	* Das System muss darüber hinaus noch dem Arzt verschiedene Fildermöglichkeiten bieten, diese sind:
 		* Filterung nach eigenen Ereignissen zu einem Medikament
 		* Filterung nach den Kategorien 
-		* Anzeige der Bewertung durch die Behörde ein oder ausschalten
+		* Anzeige der Bewertung durch die Behörde ein- oder ausschalten
 
 >+ **Behörde:**   
 	* Das System muss der Behörde eine Liste der Hersteller anzeigen (Herstellername, Anzahl angemeldete Medikamente, Anzahl bestätigter Medikammente, Anzahl noch offener Medikamente)
@@ -93,6 +93,8 @@ Anhand der vorliegenden Mängel in der Formulierung der Anforderungen für das M
 		* Filterung nach Kategorien muss gegeben sein
 		* Filterung nach Bewertungsscore muss gegeben sein
 		* Ein- und Ausblenden der Bewertungen
+
+**Die Kategorien für das System muss von der Behörde als Wertekatalog erfasst oder importiert werden, damit diese für die Erfassung der Ereignisse vorgegeben werden können.**
 
 **Anforderungen an die Benutzungsschnittstelle**
 
@@ -121,5 +123,3 @@ Anhand der vorliegenden Mängel in der Formulierung der Anforderungen für das M
 
 > Das System wird als Web-Anwendung zur verfügung gestellt   
 > Das System wird mit einem Postgresql-Datenbank System, für die Datenhaltung verknüpft
-
-**Die Kategorien für das System muss von der Behörde als Wertekatalog erfasst oder importiert werden, damit diese für die Erfassung der Ereignisse vorgegeben werden können.**

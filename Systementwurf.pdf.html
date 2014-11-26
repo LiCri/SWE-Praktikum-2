@@ -265,29 +265,23 @@ swe_p2_systementwurf.0.md<br/>rev. 0 / 23.11.2014<br/><span class="tr-page"></sp
 </ol>
 <p>Je nach Befugnis werden einem Behördenmitarbeiter ein oder mehrere Benutzerkreis(e) zugewiesen, welche unterschiedliche Rechte verleihen (s. unten).</p>
 <h3 id="benutzerkreis"><span class="header-section-number">1.2.3</span> Benutzerkreis</h3>
-<p>Einem Behördenmitarbeiter muss mindestens ein Benutzerkreis zugeordenet werden. Es existieren Benutzerkreise für die im Abschnitt <em>Behördenmitarbeiter</em> genannten Funktionen. Die Benutzerkreise können beliebig kombiniert werden.</p>
+<p>Einem Behördenmitarbeiter muss mindestens ein Benutzerkreis zugeordnet werden. Es existieren Benutzerkreise für die im Abschnitt <em>Behördenmitarbeiter</em> genannten Funktionen. Die Benutzerkreise können beliebig kombiniert werden.</p>
 <h3 id="hersteller"><span class="header-section-number">1.2.4</span> Hersteller</h3>
 <p>Hersteller erben von <em>User</em> und implementieren zusätzlich Namen und Anschrift.</p>
-<<<<<<< HEAD
 <p>Ein Hersteller kann beliebig viele Medikamente anmelden. Um mit dem System interagieren zu können, muss der <em>Hersteller</em>-Account von einem <em>Behördenmitarbeiter</em> aktiviert worden sein.</p>
-=======
-<p>Ein Hersteller kann beliebig viele Medikamente anmelden.</p>
->>>>>>> 1ad84286811cc7692b699aad7b9652f2df0670b7
 <h3 id="arzt"><span class="header-section-number">1.2.5</span> Arzt</h3>
 <p>Ärzte erben von <em>User</em> und implementieren zusätzlich Vorname, Nachname, Spezialisierung und Anschrift.</p>
-<p>Ein Arzt ist dafür zuständig Ereignisse zu Medikamenten einzutragen. Sein Status kann von Behördenmitarbeitern mit entsprechenden Rechten unter Angabe eines Grundes aktiviert oder deaktiviert werden.</p>
+<p>Ein Arzt ist dafür zuständig, Ereignisse zu Medikamenten einzutragen. Sein Status kann von Behördenmitarbeitern mit entsprechenden Rechten unter Angabe eines Grundes aktiviert oder deaktiviert werden.</p>
 <h3 id="medikament"><span class="header-section-number">1.2.6</span> Medikament</h3>
-<p>Ein Medikament wird von <em>einem</em> Hersteller eingetragen und kann anschließend von einem Behördenmitarbeiter bestätigt werden. Weiterhin kann ein Medikament beliebig vielen <em>Ereignissen</em> zugeordnet werden. Ein Medikament wird von einem Behördenmitarbeiter anhand der dafür eingetragenen <em>Ereignisse</em> bewertet.</p>
+<p>Ein Medikament wird von <em>einem</em> Hersteller eingetragen und kann anschließend von einem Behördenmitarbeiter bestätigt werden. Weiterhin kann ein Medikament beliebig vielen <em>Ereignissen</em> zugeordnet werden.</p>
 <h3 id="ereignis"><span class="header-section-number">1.2.7</span> Ereignis</h3>
-<p>Ein Ereignis wird von einem <em>Arzt</em> eingetragen und enthält weitere Informationen, welche von diesem eingetragen werden (Beschreibung und Wertung). Jedem Ereignis wird genau ein <em>Medikament</em> und mindestens eine <em>Kategorie</em> zugeordnet.</p>
+<p>Ein Ereignis wird von einem <em>Arzt</em> eingetragen. Neben einer Beschreibung wird mit der Priorität eine Einordnung bezüglich der Relevanz vorgenommen. Es gilt: Je größer der Wert, desto negativer ist das Ereignis. Jedem Ereignis wird genau ein <em>Medikament</em> und mindestens eine <em>Kategorie</em> zugeordnet.</p>
 <p>Eingetragene Ereignisse können von einem Behördenmitarbeiter bewertet werden.</p>
-<h3 id="kategorie"><span class="header-section-number">1.2.8</span> Kategorie</h3>
-<<<<<<< HEAD
+<h3 id="bewertung"><span class="header-section-number">1.2.8</span> Bewertung</h3>
+<p>Pro Medikament kann von einem <em>Behördenmitarbeiter</em> eine Bewertung eingetragen werden. Diese wird anhand der vorliegenden <em>Ereignisse</em> festgelegt. Die <em>Bewertung</em> besteht aus einem Kommentar und einer Wertung.</p>
+<h3 id="kategorie"><span class="header-section-number">1.2.9</span> Kategorie</h3>
 <p>Eine <em>Kategorie</em> spezifiziert ein <em>Ereignis</em> und wird von einem <em>Behördenmitarbeiter</em> eingetragen.</p>
-=======
-<p>Eine <em>Kategorie</em> spezifiziert ein <em>Ereignis</em>.</p>
->>>>>>> 1ad84286811cc7692b699aad7b9652f2df0670b7
-<h3 id="statusänderung"><span class="header-section-number">1.2.9</span> Statusänderung</h3>
+<h3 id="statusänderung"><span class="header-section-number">1.2.10</span> Statusänderung</h3>
 <p>Eine <em>Statusänderung</em> kann von einem <em>Behördenmitarbeiter</em> hinzugefügt werden und bezieht sich immer auf einen Arzt. Es bewirkt die Änderung des aktiv-Flags. Für die Statusänderung muss ein Grund angegeben werden.</p>
 <h2 id="umwandlung-in-relationales-datenmodell"><span class="header-section-number">1.3</span> Umwandlung in relationales Datenmodell</h2>
 <h3 id="user-1"><span class="header-section-number">1.3.1</span> User</h3>
@@ -380,13 +374,10 @@ swe_p2_systementwurf.0.md<br/>rev. 0 / 23.11.2014<br/><span class="tr-page"></sp
 <td align="left">anschrift</td>
 <td align="left">string</td>
 </tr>
-<<<<<<< HEAD
 <tr class="even">
 <td align="left">bestätigt</td>
 <td align="left">bool</td>
 </tr>
-=======
->>>>>>> 1ad84286811cc7692b699aad7b9652f2df0670b7
 </tbody>
 </table>
 <h3 id="arzt-1"><span class="header-section-number">1.3.5</span> Arzt</h3>
@@ -438,24 +429,20 @@ swe_p2_systementwurf.0.md<br/>rev. 0 / 23.11.2014<br/><span class="tr-page"></sp
 <td align="left">int</td>
 </tr>
 <tr class="even">
+<td align="left">hersteller_id</td>
+<td align="left">int</td>
+</tr>
+<tr class="odd">
 <td align="left">name</td>
 <td align="left">string</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">beschreibung</td>
 <td align="left">string</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">bestätigt</td>
 <td align="left">bool</td>
-</tr>
-<tr class="odd">
-<<<<<<< HEAD
-<td align="left">bewertung</td>
-=======
-<td align="left">Bewertung</td>
->>>>>>> 1ad84286811cc7692b699aad7b9652f2df0670b7
-<td align="left">string</td>
 </tr>
 </tbody>
 </table>
@@ -473,8 +460,15 @@ swe_p2_systementwurf.0.md<br/>rev. 0 / 23.11.2014<br/><span class="tr-page"></sp
 <td align="left">int</td>
 </tr>
 <tr class="even">
+<td align="left">medikament_id</td>
+<td align="left">int</td>
+</tr>
+<tr class="odd">
+<td align="left">arzt_id</td>
+<td align="left">int</td>
+</tr>
+<tr class="even">
 <td align="left">beschreibung</td>
-<<<<<<< HEAD
 <td align="left">string</td>
 </tr>
 <tr class="odd">
@@ -485,17 +479,36 @@ swe_p2_systementwurf.0.md<br/>rev. 0 / 23.11.2014<br/><span class="tr-page"></sp
 <td align="left">zeitpunkt</td>
 <td align="left">date</td>
 </tr>
-=======
-<td align="left">stirng</td>
+</tbody>
+</table>
+<h3 id="bewertung-1"><span class="header-section-number">1.3.8</span> Bewertung</h3>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Attribut</th>
+<th align="left">Typ</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">ereignis_id</td>
+<td align="left">int</td>
+</tr>
+<tr class="even">
+<td align="left">mitarbeiter_id</td>
+<td align="left">int</td>
 </tr>
 <tr class="odd">
+<td align="left">kommentar</td>
+<td align="left">string</td>
+</tr>
+<tr class="even">
 <td align="left">wertung</td>
 <td align="left">int</td>
 </tr>
->>>>>>> 1ad84286811cc7692b699aad7b9652f2df0670b7
 </tbody>
 </table>
-<h3 id="kategorie-1"><span class="header-section-number">1.3.8</span> Kategorie</h3>
+<h3 id="kategorie-1"><span class="header-section-number">1.3.9</span> Kategorie</h3>
 <table>
 <thead>
 <tr class="header">
@@ -512,16 +525,13 @@ swe_p2_systementwurf.0.md<br/>rev. 0 / 23.11.2014<br/><span class="tr-page"></sp
 <td align="left">bezeichnung</td>
 <td align="left">string</td>
 </tr>
-<<<<<<< HEAD
 <tr class="odd">
 <td align="left">mitarbeiter_id</td>
 <td align="left">int</td>
 </tr>
-=======
->>>>>>> 1ad84286811cc7692b699aad7b9652f2df0670b7
 </tbody>
 </table>
-<h3 id="ereignis_kategorie"><span class="header-section-number">1.3.9</span> Ereignis_Kategorie</h3>
+<h3 id="ereignis_kategorie"><span class="header-section-number">1.3.10</span> Ereignis_Kategorie</h3>
 <table>
 <thead>
 <tr class="header">
@@ -540,7 +550,7 @@ swe_p2_systementwurf.0.md<br/>rev. 0 / 23.11.2014<br/><span class="tr-page"></sp
 </tr>
 </tbody>
 </table>
-<h3 id="statusänderung-1"><span class="header-section-number">1.3.10</span> Statusänderung</h3>
+<h3 id="statusänderung-1"><span class="header-section-number">1.3.11</span> Statusänderung</h3>
 <table>
 <thead>
 <tr class="header">
@@ -554,11 +564,7 @@ swe_p2_systementwurf.0.md<br/>rev. 0 / 23.11.2014<br/><span class="tr-page"></sp
 <td align="left">int</td>
 </tr>
 <tr class="even">
-<<<<<<< HEAD
 <td align="left">mitarbeiter_id</td>
-=======
-<td align="left">behördenMA_id</td>
->>>>>>> 1ad84286811cc7692b699aad7b9652f2df0670b7
 <td align="left">int</td>
 </tr>
 <tr class="odd">
@@ -575,5 +581,65 @@ swe_p2_systementwurf.0.md<br/>rev. 0 / 23.11.2014<br/><span class="tr-page"></sp
 </tr>
 </tbody>
 </table>
+<h2 id="komponenten"><span class="header-section-number">1.4</span> Komponenten</h2>
+<div class="figure">
+<img src="./Diagramme/uml-komponentendiagramm.png" alt="Komponenten" /><p class="caption">Komponenten</p>
+</div>
+<h3 id="beschreibung-1"><span class="header-section-number">1.4.1</span> Beschreibung</h3>
+<ul>
+<li><p>(externes) Melderegister: Stellt die zum Abgleichen benötigten externen Daten zur Verfügung.</p></li>
+<li><p>Hardwerzugriffsschicht: Gewährleistet den Hardwarezugriff auf die Daten.</p></li>
+<li><p>DBMS: Verwaltet die Datenbank per PostgresSQL. Es sind Standart Zugriffe möglich, wie lesen, schreiben und löschen.</p></li>
+<li><p>Webserver: Stellt die Webaplikation Meldeverfahren zur Verfügung und leiten die externen/internen Datenzugriffe an sie weiter.</p></li>
+<li><p>Meldeverfahren: Die Webaplikation, welche dem Benutzer die gewünschten Funktionen zur Verfügung stellt und seine Eingaben verarbeitet.</p></li>
+<li><p>Webbrowser: Beliebiger Webbrowser, der die Benutzereingaben an den Webserver schickt und die gewünschten Funktionen für den Benutzer zur Darstellung bringt.</p></li>
+</ul>
+<h3 id="komponenten-des-meldeverfahrens"><span class="header-section-number">1.4.2</span> Komponenten des Meldeverfahrens</h3>
+<div class="figure">
+<img src="./Diagramme/Meldeverfahren.png" alt="Komponenten" /><p class="caption">Komponenten</p>
+</div>
+<ul>
+<li><p>Benutzerschnittstelle: Liefert die Benutzerfunktionen durch der von der Authentifizierung geliferten für den aktuellen Benutzer freigegebenen Funktionen und greift durch die Aplikationslogik auf diese zu.</p></li>
+<li><p>Aplikationslogik: Liefert Funktions zugriff auf die von der benutzerschnittstelle benötigten Funktionen.</p></li>
+<li><p>Authentifizierung: Authentifiziert den benutzer und gibt der Benutzerschnittstelle an welche Funktionen dieser zur Verfügung hat.</p></li>
+</ul>
+<h3 id="komponenten-der-benutzerschnittstelle"><span class="header-section-number">1.4.3</span> Komponenten der Benutzerschnittstelle</h3>
+<div class="figure">
+<img src="./Diagramme/Benutzerschnittstelle.png" alt="Komponenten" /><p class="caption">Komponenten</p>
+</div>
+<ul>
+<li><p>Funktionen vorbereiten</p></li>
+<li><p>Benutzerfunktion</p></li>
+</ul>
+<div class="figure">
+<img src="./Wireframes/Arzt_registrieren.png" alt="Komponenten" /><p class="caption">Komponenten</p>
+</div>
+<div class="figure">
+<img src="./Wireframes/Ereignis_melden.png" alt="Komponenten" /><p class="caption">Komponenten</p>
+</div>
+<div class="figure">
+<img src="./Wireframes/Medikament_Registrieren.png" alt="Komponenten" /><p class="caption">Komponenten</p>
+</div>
+<h3 id="komponenten-der-authentifizierung"><span class="header-section-number">1.4.4</span> Komponenten der Authentifizierung</h3>
+<div class="figure">
+<img src="./Diagramme/Authentifizierung.png" alt="Komponenten" /><p class="caption">Komponenten</p>
+</div>
+<ul>
+<li><p>Registrieren/Einlogen</p></li>
+<li><p>Registrierung/Login prüfen</p></li>
+<li><p>Funktionen freigeben</p></li>
+</ul>
+<h3 id="komponenten-der-aplikationslogik"><span class="header-section-number">1.4.5</span> Komponenten der Aplikationslogik</h3>
+<div class="figure">
+<img src="./Diagramme/Anwendungslogik.png" alt="Komponenten" /><p class="caption">Komponenten</p>
+</div>
+<ul>
+<li><p>externer Daten zugriff</p></li>
+<li><p>interne Daten verwalten</p></li>
+<li><p>Funktionen Medikamente</p></li>
+<li><p>Funktionen Datenpflege</p></li>
+<li><p>Funktionen DV</p></li>
+<li><p>Funktionen</p></li>
+</ul>
 </body>
 </html>
